@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>D-Tech Electronics | Magasin d'Électronique Premium</title>
+    <meta name="description"
+        content="D-Tech Electronics - Votre source de confiance pour les ordinateurs, appareils électroménagers, smartphones et plus.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #00a8ff;
+            --dark: #0f172a;
+            --darker: #020617;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --glass: rgba(15, 23, 42, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glow: 0 0 20px rgba(0, 168, 255, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .brand {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--secondary), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 45px;
+            filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.4));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--secondary);
+            text-shadow: var(--glow);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--light);
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 1000;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .menu-btn:hover {
+            color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .cart-btn {
+            background: transparent;
+            border: none;
+            color: var(--light);
+            font-size: 1.4rem;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .cart-btn:hover {
+            color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--secondary);
+            color: #fff;
+            font-size: 0.75rem;
+            padding: 2px 7px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        /* SPA Views */
+        .view {
+            display: none;
+            opacity: 0;
+            padding-top: 100px;
+            min-height: 80vh;
+            animation: fadeIn 0.4s forwards;
+        }
+
+        .view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: -80px;
+            padding: 0 5%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(0, 168, 255, 0.15) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            animation: floatOrb 15s infinite alternate;
+            opacity: 0.5;
+        }
+
+        .orb-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--secondary);
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 400px;
+            height: 400px;
+            background: #8b5cf6;
+            bottom: -10%;
+            right: 10%;
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: var(--primary);
+            top: 30%;
+            right: 20%;
+            animation-delay: -10s;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatOrb {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(100px, 50px);
+            }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 5.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--light);
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 4px 15px rgba(0, 86, 179, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 168, 255, 0.6);
+        }
+
+        /* Marquee */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0, 168, 255, 0.05);
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            white-space: nowrap;
+            margin-bottom: 4rem;
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+            gap: 4rem;
+            font-family: 'Outfit';
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .marquee-content span {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .marquee-content span i {
+            color: var(--secondary);
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Bento Categories */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 250px 250px;
+            gap: 1.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .bento-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.4s;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+            text-decoration: none;
+        }
+
+        .bento-item:hover {
+            transform: scale(1.02);
+            border-color: var(--secondary);
+            box-shadow: var(--glow);
+        }
+
+        .bento-item h3 {
+            color: #fff;
+            font-size: 1.8rem;
+            z-index: 2;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .bento-item img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+        .bento-item:hover img {
+            transform: translate(-50%, -50%) scale(1.1);
+            opacity: 0.6;
+        }
+
+        .bento-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .bento-tall {
+            grid-row: span 2;
+        }
+
+        /* Brands Grid */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .brand-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .brand-logo-img {
+            height: 60px;
+            max-width: 80%;
+            object-fit: contain;
+            z-index: 2;
+            position: relative;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+        }
+
+        .brand-item:hover .brand-logo-img {
+            transform: scale(1.15) translateY(-5px);
+        }
+
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin: 4rem 0 3rem;
+        }
+
+        .section-title span {
+            color: var(--secondary);
+        }
+
+        .about-section {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 5rem 0;
+            margin-top: 6rem;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+        }
+
+        .about-section p {
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.15rem;
+            line-height: 1.7;
+            margin-top: 1rem;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(0, 168, 255, 0.05);
+            padding: 1.5rem 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 168, 255, 0.2);
+        }
+
+        .badge i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .badge h4 {
+            font-size: 1.2rem;
+        }
+
+        /* Products Grid & Filters — Elite Panel */
+        .filters {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-bottom: 2.5rem;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(16px);
+        }
+
+        .filter-row {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 1.5rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .filter-row:last-child {
+            border-bottom: none;
+        }
+
+        .filter-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: var(--gray);
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            white-space: nowrap;
+            min-width: 110px;
+            flex-shrink: 0;
+        }
+
+        .filter-label i {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            opacity: 0.7;
+        }
+
+        .filter-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.45rem 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            font-size: 0.82rem;
+            font-family: 'Outfit', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn:hover {
+            background: rgba(14, 165, 233, 0.08);
+            color: #fff;
+            border-color: rgba(14, 165, 233, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(0, 168, 255, 0.12));
+            color: #fff;
+            border-color: var(--secondary);
+            box-shadow: 0 0 12px rgba(14, 165, 233, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: var(--secondary);
+            border-radius: 2px;
+            box-shadow: 0 0 8px var(--secondary);
+        }
+
+        .filter-btn .count-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 20px;
+            height: 18px;
+            padding: 0 5px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            margin-left: 0.4rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .filter-btn.active .count-badge {
+            background: rgba(14, 165, 233, 0.3);
+            color: var(--secondary);
+        }
+
+        .filter-btn--promo {
+            border-color: rgba(239, 68, 68, 0.15);
+        }
+
+        .filter-btn--promo:hover {
+            background: rgba(239, 68, 68, 0.08);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        .filter-btn--promo.active {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.18), rgba(239, 68, 68, 0.08));
+            border-color: #ef4444;
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .filter-btn--promo.active::after {
+            background: #ef4444;
+            box-shadow: 0 0 8px #ef4444;
+        }
+
+        .filter-btn--new {
+            border-color: rgba(34, 197, 94, 0.15);
+        }
+
+        .filter-btn--new:hover {
+            background: rgba(34, 197, 94, 0.08);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+
+        .filter-btn--new.active {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(34, 197, 94, 0.08));
+            border-color: #22c55e;
+            box-shadow: 0 0 12px rgba(34, 197, 94, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+        }
+
+        .filter-btn--new.active::after {
+            background: #22c55e;
+            box-shadow: 0 0 8px #22c55e;
+        }
+
+        .filter-clear-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            font-size: 0.78rem;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+            font-family: 'Outfit', sans-serif;
+            margin-left: auto;
+        }
+
+        .filter-clear-btn:hover {
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.08);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 6rem;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            transform: skewX(-20deg);
+            transition: 0.5s;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .product-card:hover::before {
+            left: 150%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(0, 168, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), var(--glow);
+        }
+
+        .product-img-wrap {
+            width: calc(100% + 3rem);
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+            background: #ffffff;
+            position: relative;
+            z-index: 2;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .product-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            mix-blend-mode: multiply;
+        }
+
+        .product-card:hover .product-img-wrap img {
+            transform: scale(1.1) translateY(-5px);
+        }
+
+        .product-category {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin: 0.5rem 0 1rem;
+            font-weight: 600;
+            line-height: 1.3;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: 'Outfit';
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 1.1rem;
+            margin-left: 0.5rem;
+            font-weight: 400;
+        }
+
+        .tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 3;
+        }
+
+        .tag.new {
+            background: rgba(0, 168, 255, 0.2);
+            color: var(--secondary);
+            border: 1px solid var(--secondary);
+        }
+
+        .tag.discount {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid #ef4444;
+        }
+
+        /* Add to cart button override for card */
+        .product-card .add-to-cart {
+            position: relative;
+            z-index: 5;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .add-to-cart:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(0, 86, 179, 0.5);
+        }
+
+        /* Product Detail View */
+        .product-detail-layout {
+            display: flex;
+            gap: 4rem;
+            margin-bottom: 4rem;
+            align-items: flex-start;
+        }
+
+        .product-detail-img {
+            flex: 1;
+            background: #ffffff;
+            border-radius: 24px;
+            display: flex;
+            justify-content: center;
+            border: 1px solid var(--glass-border);
+            overflow: hidden;
+            min-height: 400px;
+        }
+
+        .product-detail-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mix-blend-mode: multiply;
+        }
+
+        .product-detail-info {
+            flex: 1;
+        }
+
+        .product-detail-info h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .product-detail-price {
+            font-size: 2.8rem;
+            color: var(--secondary);
+            font-family: 'Outfit';
+            font-weight: 800;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .product-detail-desc {
+            color: var(--gray);
+            font-size: 1.15rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .specs-list {
+            list-style: none;
+            margin-bottom: 3rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--glass-border);
+        }
+
+        .specs-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.05rem;
+        }
+
+        .specs-list li:last-child {
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .specs-list li span:first-child {
+            color: var(--gray);
+        }
+
+        .specs-list li span:last-child {
+            font-weight: 600;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--secondary);
+        }
+
+        /* Checkout View */
+        .checkout-layout {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .checkout-form-col {
+            flex: 1.5;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .checkout-summary-col {
+            flex: 1;
+        }
+
+        .checkout-summary-card {
+            background: rgba(15, 23, 42, 0.8);
+            padding: 2.5rem;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 168, 255, 0.3);
+            position: sticky;
+            top: 120px;
+            box-shadow: var(--glow);
+        }
+
+        /* Cart Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 6, 23, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--dark);
+            border: 1px solid rgba(0, 168, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border-radius: 24px;
+            padding: 2.5rem;
+            width: 90%;
+            max-width: 550px;
+            position: relative;
+            transform: translateY(50px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0) scale(1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: none;
+            color: var(--gray);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover {
+            color: var(--light);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1.5rem 0;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            padding: 0.5rem;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .cart-item-price {
+            color: var(--secondary);
+            font-family: 'Outfit';
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 2rem 0;
+            font-family: 'Outfit';
+            border-top: 2px solid rgba(255, 255, 255, 0.05);
+            padding-top: 1.5rem;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: white;
+            font-family: inherit;
+            font-size: 1.05rem;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.1);
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            grid-column: 1/-1;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--light);
+            border: 1px solid var(--glass-border);
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 600;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .page-btn.active {
+            background: var(--primary);
+            border-color: var(--secondary);
+            box-shadow: var(--glow);
+        }
+
+        .page-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        footer {
+            border-top: 1px solid var(--glass-border);
+            padding: 4rem 0;
+            text-align: center;
+            color: var(--gray);
+            background: rgba(15, 23, 42, 0.3);
+        }
+
+        /* RESPONSIVE DESIGN - 900px & below */
+        @media (max-width: 900px) {
+
+            /* Navigation */
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(15, 23, 42, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .nav-links a {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+            /* Hero */
+            .hero {
+                min-height: 80vh;
+                padding-top: 100px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            /* Grids */
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .bento-large,
+            .bento-tall {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .bento-item {
+                height: 250px;
+            }
+
+            .brands-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .brand-item {
+                padding: 2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            /* 1 Wide Column on Mobile */
+
+            /* Details & Checkout */
+            .product-detail-layout,
+            .checkout-layout {
+                flex-direction: column;
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .product-detail-img {
+                padding: 1.5rem;
+            }
+
+            .product-detail-info h1 {
+                font-size: 2.2rem;
+            }
+
+            .product-detail-price {
+                font-size: 2.2rem;
+            }
+
+            .checkout-summary-card {
+                position: static;
+                padding: 1.5rem;
+            }
+
+            .checkout-form-col {
+                padding: 1.5rem;
+            }
+
+            /* Modals & Cart */
+            .modal-content {
+                padding: 1.5rem;
+                width: 95%;
+            }
+
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .cart-item img {
+                width: 100%;
+                height: 150px;
+            }
+        }
+
+        /* VERY SMALL SCREENS */
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+                text-align: left;
+            }
+
+            .badge {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="container nav-content">
+                <a href="#home"><img src="logos.jpeg" alt="D-Tech Logo" class="logo"></a>
+
+                <nav class="nav-links" id="nav-links">
+                    <a href="#home" onclick="closeMenu()">Accueil</a>
+                    <a href="#products" onclick="closeMenu()">Produits</a>
+                    <a href="#home"
+                        onclick="closeMenu(); setTimeout(()=>document.getElementById('about-sec').scrollIntoView({behavior:'smooth'}), 100)">À
+                        propos</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </button>
+                    <button class="menu-btn" id="menu-btn" onclick="toggleMenu()" aria-label="Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main id="app-content">
+            <!-- HOME VIEW -->
+            <div id="view-home" class="view">
+                <section class="hero">
+                    <div class="hero-orb orb-1"></div>
+                    <div class="hero-orb orb-2"></div>
+                    <div class="hero-orb orb-3"></div>
+                    <div class="hero-content">
+                        <div
+                            style="display:inline-block; padding: 0.5rem 1.2rem; background: rgba(0,168,255,0.1); border: 1px solid rgba(0,168,255,0.3); border-radius: 20px; font-weight:600; color: var(--secondary); margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 1px;">
+                            <i class="fa-solid fa-bolt" style="margin-right:0.5rem"></i> L'INNOVATION AU QUOTIDIEN
+                        </div>
+                        <h1 class="text-gradient">L'Avenir de la Maison, Aujourd'hui.</h1>
+                        <p>Découvrez notre collection d'élite d'appareils électroménagers, de téléviseurs haut de gamme
+                            et de climatisation. Vivez le confort et l'innovation redéfinis au quotidien.</p>
+                        <div style="display:flex; gap: 1rem; align-items: center; justify-content: center;">
+                            <a href="#products" class="btn btn-primary">
+                                Voir les Produits <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </section>
+
+                <div class="marquee-container">
+                    <div class="marquee-content">
+                        <span><i class="fa-solid fa-snowflake"></i> Climatisation Inverter Avancée</span>
+                        <span><i class="fa-solid fa-tv"></i> Téléviseurs QLED & 4K UHD</span>
+                        <span><i class="fa-solid fa-shirt"></i> Lavage Vapeur Intelligent</span>
+                        <span><i class="fa-solid fa-icicles"></i> Réfrigération Total No-Frost</span>
+                        <span><i class="fa-solid fa-utensils"></i> Lavage Vaisselle Ultra-Performant</span>
+                        <span><i class="fa-solid fa-temperature-low"></i> Congélation Rapide Extrême</span>
+                        <span><i class="fa-solid fa-kitchen-set"></i> Électroménager Encastrable Design</span>
+                        <span><i class="fa-solid fa-blender"></i> Petit Électroménager Innovant</span>
+                        <span><i class="fa-solid fa-fire-burner"></i> Cuisson Micro-ondes Express</span>
+
+                        <!-- Duplicate for smooth infinite scroll -->
+                        <span><i class="fa-solid fa-snowflake"></i> Climatisation Inverter Avancée</span>
+                        <span><i class="fa-solid fa-tv"></i> Téléviseurs QLED & 4K UHD</span>
+                        <span><i class="fa-solid fa-shirt"></i> Lavage Vapeur Intelligent</span>
+                        <span><i class="fa-solid fa-icicles"></i> Réfrigération Total No-Frost</span>
+                        <span><i class="fa-solid fa-utensils"></i> Lavage Vaisselle Ultra-Performant</span>
+                        <span><i class="fa-solid fa-temperature-low"></i> Congélation Rapide Extrême</span>
+                        <span><i class="fa-solid fa-kitchen-set"></i> Électroménager Encastrable Design</span>
+                        <span><i class="fa-solid fa-blender"></i> Petit Électroménager Innovant</span>
+                        <span><i class="fa-solid fa-fire-burner"></i> Cuisson Micro-ondes Express</span>
+                    </div>
+                </div>
+
+                <section class="container">
+                    <h2 class="section-title" style="text-align:left; margin-bottom: 2rem;">Acheter par <span
+                            class="text-gradient">Catégorie</span></h2>
+                    <div class="bento-grid">
+                        <a href="#products" class="bento-item bento-large"
+                            onclick="setTimeout(()=>filterProducts('MAL'), 100)">
+                            <img src="img/mal.png" alt="Machine à Laver">
+                            <h3>Machines à Laver <i class="fa-solid fa-arrow-right"
+                                    style="font-size:1.2rem; margin-left:0.5rem"></i></h3>
+                        </a>
+                        <a href="#products" class="bento-item" onclick="setTimeout(()=>filterProducts('REF'), 100)">
+                            <img src="img/ref.png" alt="Réfrigérateur">
+                            <h3>Réfrigérateurs <i class="fa-solid fa-arrow-right"
+                                    style="font-size:1.2rem; margin-left:0.5rem"></i></h3>
+                        </a>
+                        <a href="#products" class="bento-item" onclick="setTimeout(()=>filterProducts('TV'), 100)">
+                            <img src="img/tv.png" alt="Téléviseur">
+                            <h3>Téléviseurs <i class="fa-solid fa-arrow-right"
+                                    style="font-size:1.2rem; margin-left:0.5rem"></i></h3>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="container">
+                    <h2 class="section-title" style="text-align:left; margin-bottom: 2rem;">Acheter par <span
+                            class="text-gradient">Marque</span></h2>
+                    <div class="brands-grid">
+                        <a href="#products" class="brand-item" onclick="setTimeout(()=>filterByBrand('Condor'), 100)">
+                            <img src="img/condor.svg" alt="Condor" class="brand-logo-img">
+                        </a>
+                        <a href="#products" class="brand-item" onclick="setTimeout(()=>filterByBrand('Hisense'), 100)">
+                            <img src="img/hisense.svg" alt="Hisense" class="brand-logo-img">
+                        </a>
+                        <a href="#products" class="brand-item" onclick="setTimeout(()=>filterByBrand('TCL'), 100)">
+                            <img src="img/tcl.svg" alt="TCL" class="brand-logo-img">
+                        </a>
+                    </div>
+                </section>
+
+                <section class="container">
+                    <h2 class="section-title">Nouveaux <span>Arrivages</span></h2>
+                    <div class="products-grid" id="home-new-products"></div>
+                </section>
+
+
+                <section class="container">
+                    <h2 class="section-title">Offres <span>Spéciales</span></h2>
+                    <div class="products-grid" id="home-discount-products"></div>
+                </section>
+
+                <section class="about-section" id="about-sec">
+                    <div class="container">
+                        <h2>Pourquoi Choisir <span class="text-gradient">D-Tech</span>?</h2>
+                        <p>Nous ne vendons pas seulement de l'électronique ; nous concevons l'avenir. Chaque produit de
+                            notre catalogue d'élite est sélectionné pour sa qualité irréprochable, son design innovant
+                            et ses performances supérieures. Votre voyage vers la pointe de la technologie commence ici.
+                        </p>
+                        <div class="badges">
+                            <div class="badge">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <h4>Garantie d'élite</h4>
+                            </div>
+                            <div class="badge">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <h4>Retrait Rapide en Magasin</h4>
+                            </div>
+                            <div class="badge">
+                                <i class="fa-solid fa-headset"></i>
+                                <h4>Support Premium</h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- PRODUCTS VIEW -->
+            <div id="view-products" class="view">
+                <div class="container">
+                    <div
+                        style="display:flex; justify-content:space-between; align-items:center; margin-top:2rem; margin-bottom:1.2rem;">
+                        <h2 class="section-title" style="margin:0;">Tous les <span>Produits</span></h2>
+                        <span id="products-count" style="color:var(--gray); font-size:1.1rem; font-weight:500;"></span>
+                    </div>
+                    <div class="filters" id="filters"></div>
+                    <div class="products-grid" id="products-grid"></div>
+                </div>
+            </div>
+
+            <!-- PRODUCT DETAIL VIEW -->
+            <div id="view-product-detail" class="view">
+                <div class="container" id="product-detail-container">
+                    <!-- Injected by JS -->
+                </div>
+            </div>
+
+            <!-- CHECKOUT VIEW -->
+            <div id="view-checkout" class="view">
+                <div class="container">
+                    <h2 class="section-title" style="text-align:left; margin-top:2rem;">Paiement <span>Sécurisé</span>
+                    </h2>
+                    <div class="checkout-layout">
+                        <div class="checkout-form-col">
+                            <h3 style="margin-bottom: 2rem; font-size:1.8rem;">Détails de Contact (Paiement en magasin)
+                            </h3>
+                            <form id="checkout-form" onsubmit="submitOrder(event)">
+                                <div class="form-group">
+                                    <label>Nom Complet</label>
+                                    <input type="text" class="form-control" placeholder="Jean Dupont" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Adresse E-mail</label>
+                                    <input type="email" class="form-control" placeholder="jean@exemple.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Numéro de Téléphone</label>
+                                    <input type="tel" class="form-control" placeholder="+216 00 00 00 00" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Magasin de Retrait Préféré</label>
+                                    <select class="form-control" required style="background-color: var(--darker)">
+                                        <option value="main">D-Tech Hub Principal (Centre-ville)</option>
+                                        <option value="west">D-Tech Succursale Ouest</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary"
+                                    style="width:100%; padding: 1.5rem; margin-top: 2rem; font-size:1.2rem;">
+                                    Confirmer la Réservation <i class="fa-solid fa-lock"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="checkout-summary-col">
+                            <div class="checkout-summary-card">
+                                <h3
+                                    style="margin-bottom: 1.5rem; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                                    Résumé de la Commande</h3>
+                                <div id="checkout-items-list"
+                                    style="margin-bottom: 1.5rem; max-height: 400px; overflow-y: auto;"></div>
+                                <div class="cart-total"
+                                    style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; margin-top:0;">
+                                    <span style="font-size:1.2rem; color:var(--gray)">Total</span>
+                                    <span id="checkout-total-price" class="text-gradient"
+                                        style="font-size: 2.2rem;">$0.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <img src="logos.jpeg" alt="D-Tech Logo"
+                    style="height: 35px; filter: grayscale(1) opacity(0.3); margin-bottom: 1.5rem;">
+                <p>&copy; 2026 D-Tech Electronics. Qualité d'élite. Paiement en magasin uniquement.</p>
+            </div>
+        </footer>
+
+        <div class="modal-overlay" id="cart-modal" onclick="if(event.target===this) toggleCart()">
+            <div class="modal-content">
+                <button class="close-modal" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+                <h2 style="margin-bottom: 1.5rem; font-size: 2rem;">Votre Panier</h2>
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price" class="text-gradient">$0.00</span>
+                </div>
+                <a href="#checkout" class="btn btn-primary" style="width:100%; padding: 1.2rem;"
+                    onclick="toggleCart()">Procéder au Paiement</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, name: 'MAL CONDOR Semi- Auto 10.5 kg Tulipe', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT10T1', price: 445, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WT10T1', specs: { 'Marque': 'Condor', 'Référence': 'WT10T1', 'Catégorie': 'Machine à Laver', 'Prix HT': '445.000 TND' } },
+            { id: 2, name: 'MAL CONDOR Semi- Auto 10.5 kg Tulipe Bleu', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT10T1BF', price: 445, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WT10T1BF', specs: { 'Marque': 'Condor', 'Référence': 'WT10T1BF', 'Catégorie': 'Machine à Laver', 'Prix HT': '445.000 TND' } },
+            { id: 3, name: 'MAL CONDOR Semi-Auto 13 kg Tulipe', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT13T1', price: 510, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WT13T1', specs: { 'Marque': 'Condor', 'Référence': 'WT13T1', 'Catégorie': 'Machine à Laver', 'Prix HT': '510.000 TND' } },
+            { id: 4, name: 'MAL CONDOR Semi-Auto 13 kg Tulipe Bleu', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT13T1BF', price: 510, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WT13T1BF', specs: { 'Marque': 'Condor', 'Référence': 'WT13T1BF', 'Catégorie': 'Machine à Laver', 'Prix HT': '510.000 TND' } },
+            { id: 5, name: 'MAL Condor TOP 8kg Blanche', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WAT-KS3M34W', price: 675, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WAT-KS3M34W', specs: { 'Marque': 'Condor', 'Référence': 'WAT-KS3M34W', 'Catégorie': 'Machine à Laver', 'Prix HT': '675.000 TND' } },
+            { id: 6, name: 'MAL Condor TOP 8kg GRIS', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WAT-KS3M34D', price: 705, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WAT-KS3M34D', specs: { 'Marque': 'Condor', 'Référence': 'WAT-KS3M34D', 'Catégorie': 'Machine à Laver', 'Prix HT': '705.000 TND' } },
+            { id: 7, name: 'MALCondor Top 10,5 kg BL', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WL10-MS35W', price: 870, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WL10-MS35W', specs: { 'Marque': 'Condor', 'Référence': 'WL10-MS35W', 'Catégorie': 'Machine à Laver', 'Prix HT': '870.000 TND' } },
+            { id: 8, name: 'Mal Condor Top 10,5 kg Dark Silver', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WL10-MS35D', price: 915, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WL10-MS35D', specs: { 'Marque': 'Condor', 'Référence': 'WL10-MS35D', 'Catégorie': 'Machine à Laver', 'Prix HT': '915.000 TND' } },
+            { id: 9, name: 'MAL Condor 6Kg/1200 Trs BLANC', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WF6-A12W', price: 840, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WF6-A12W', specs: { 'Marque': 'Condor', 'Référence': 'WF6-A12W', 'Catégorie': 'Machine à Laver', 'Prix HT': '840.000 TND' } },
+            { id: 10, name: 'MAL Condor 6Kg/1000 Trs SILVER', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F610LS', price: 895, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F610LS', specs: { 'Marque': 'Condor', 'Référence': 'CON-F610LS', 'Catégorie': 'Machine à Laver', 'Prix HT': '895.000 TND' } },
+            { id: 11, name: 'MAL Condor 6Kg/1000 Trs Noir', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F610LB', price: 895, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F610LB', specs: { 'Marque': 'Condor', 'Référence': 'CON-F610LB', 'Catégorie': 'Machine à Laver', 'Prix HT': '895.000 TND' } },
+            { id: 12, name: 'MAL Condor 7Kg/1000 Trs SILVER', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F710L', price: 900, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F710L', specs: { 'Marque': 'Condor', 'Référence': 'CON-F710L', 'Catégorie': 'Machine à Laver', 'Prix HT': '900.000 TND' } },
+            { id: 13, name: 'MAL Condor 7Kg/1000 Trs SILVER', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F710LS', price: 955, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F710LS', specs: { 'Marque': 'Condor', 'Référence': 'CON-F710LS', 'Catégorie': 'Machine à Laver', 'Prix HT': '955.000 TND' } },
+            { id: 14, name: 'MAL Condor 7Kg/1000 Trs noir', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F710LB', price: 955, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F710LB', specs: { 'Marque': 'Condor', 'Référence': 'CON-F710LB', 'Catégorie': 'Machine à Laver', 'Prix HT': '955.000 TND' } },
+            { id: 15, name: 'MAL CONDOR 8KG 1200 trs BLANC', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WAF-KU241L3W', price: 1085, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WAF-KU241L3W', specs: { 'Marque': 'Condor', 'Référence': 'WAF-KU241L3W', 'Catégorie': 'Machine à Laver', 'Prix HT': '1085.000 TND' } },
+            { id: 16, name: 'MAL Condor 8KG 1200 trs BLACK', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F812DS', price: 1135, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F812DS', specs: { 'Marque': 'Condor', 'Référence': 'CON-F812DS', 'Catégorie': 'Machine à Laver', 'Prix HT': '1135.000 TND' } },
+            { id: 17, name: 'MAL Condor 8KG 1200 trs BLACK', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F812DB', price: 1160, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F812DB', specs: { 'Marque': 'Condor', 'Référence': 'CON-F812DB', 'Catégorie': 'Machine à Laver', 'Prix HT': '1160.000 TND' } },
+            { id: 18, name: 'MAL CONDOR FRONTAL 9KG 1200 TR/BL', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F912D', price: 1140, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F912D', specs: { 'Marque': 'Condor', 'Référence': 'CON-F912D', 'Catégorie': 'Machine à Laver', 'Prix HT': '1140.000 TND' } },
+            { id: 19, name: 'MAL Condor 9KG 1200 trs Noir', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F9121B', price: 1260, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F9121B', specs: { 'Marque': 'Condor', 'Référence': 'CON-F9121B', 'Catégorie': 'Machine à Laver', 'Prix HT': '1260.000 TND' } },
+            { id: 20, name: 'MAL Condor 9KG 120 ORPM Dark SILVER', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F912DS', price: 1200, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-F912DS', specs: { 'Marque': 'Condor', 'Référence': 'CON-F912DS', 'Catégorie': 'Machine à Laver', 'Prix HT': '1200.000 TND' } },
+            { id: 21, name: 'MAL Condor 10,5 KG 1200 trs Noir', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-FM121B', price: 1470, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: CON-FM121B', specs: { 'Marque': 'Condor', 'Référence': 'CON-FM121B', 'Catégorie': 'Machine à Laver', 'Prix HT': '1470.000 TND' } },
+            { id: 22, name: 'MAL CONDOR Luna 10.5 Kg Inverter/1400 Trs Titanium', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WAF-XLB441L1T', price: 1450, img: 'img/mal.png', isNew: false, desc: 'Condor - Réf: WAF-XLB441L1T', specs: { 'Marque': 'Condor', 'Référence': 'WAF-XLB441L1T', 'Catégorie': 'Machine à Laver', 'Prix HT': '1450.000 TND' } },
+            { id: 23, name: 'LV Condor 16 couverts inverter Aff Inox', brand: 'Condor', category: 'LAVE VAISSELLE', categoryLabel: 'Lave-Vaisselle', reference: 'CLV-LUX16X', price: 1470, img: 'img/lave-vaisselle.png', isNew: false, desc: 'Condor - Réf: CLV-LUX16X', specs: { 'Marque': 'Condor', 'Référence': 'CLV-LUX16X', 'Catégorie': 'Lave-Vaisselle', 'Prix HT': '1470.000 TND' } },
+            { id: 24, name: 'LV Condor 16 couverts inverter Aff Noir', brand: 'Condor', category: 'LAVE VAISSELLE', categoryLabel: 'Lave-Vaisselle', reference: 'CLV-LUX16XB', price: 1525, img: 'img/lave-vaisselle.png', isNew: false, desc: 'Condor - Réf: CLV-LUX16XB', specs: { 'Marque': 'Condor', 'Référence': 'CLV-LUX16XB', 'Catégorie': 'Lave-Vaisselle', 'Prix HT': '1525.000 TND' } },
+            { id: 25, name: 'MINI BAR CONDOR 45L', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRF-T5GM8', price: 375, img: 'img/ref.png', isNew: false, desc: 'Condor - Réf: CRF-T5GM8', specs: { 'Marque': 'Condor', 'Référence': 'CRF-T5GM8', 'Catégorie': 'Réfrigérateur', 'Prix HT': '375.000 TND' } },
+            { id: 26, name: 'REF CONDOR Rouge AVEC DISTRIBUTEUR D\'EAU / R601a', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRF-T24GD14R', price: 710, img: 'img/ref.png', isNew: false, desc: 'Condor - Réf: CRF-T24GD14R', specs: { 'Marque': 'Condor', 'Référence': 'CRF-T24GD14R', 'Catégorie': 'Réfrigérateur', 'Prix HT': '710.000 TND' } },
+            { id: 27, name: 'REF Condor DF 345L Blanc avec serrure', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRD45V4W-S', price: 1095, img: 'img/ref.png', isNew: false, desc: 'Condor - Réf: CRD45V4W-S', specs: { 'Marque': 'Condor', 'Référence': 'CRD45V4W-S', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1095.000 TND' } },
+            { id: 28, name: 'REF Condor DF 345LGRIS avec serrure', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRD45V4G-S', price: 1180, img: 'img/ref.png', isNew: false, desc: 'Condor - Réf: CRD45V4G-S', specs: { 'Marque': 'Condor', 'Référence': 'CRD45V4G-S', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1180.000 TND' } },
+            { id: 29, name: 'REF Condor DF 345LINOX avec serrure', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRD45V4X-S', price: 1200, img: 'img/ref.png', isNew: false, desc: 'Condor - Réf: CRD45V4X-S', specs: { 'Marque': 'Condor', 'Référence': 'CRD45V4X-S', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1200.000 TND' } },
+            { id: 30, name: 'REFRIGERATEUR 2P NO-FROST 415L Blanc', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRDN560-W', price: 1580, img: 'img/ref.png', isNew: false, desc: 'Condor - Réf: CRDN560-W', specs: { 'Marque': 'Condor', 'Référence': 'CRDN560-W', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1580.000 TND' } },
+            { id: 31, name: 'REFRIGERATEUR 2P NO-FROST 470L Blanc', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRDN630W', price: 1710, img: 'img/ref.png', isNew: false, desc: 'Condor - Réf: CRDN630W', specs: { 'Marque': 'Condor', 'Référence': 'CRDN630W', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1710.000 TND' } },
+            { id: 32, name: 'SBS NF Condor 640 L Aff/ Dark Inox', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRS81NDX', price: 2740, img: 'img/ref.png', isNew: false, desc: 'Condor - Réf: CRS81NDX', specs: { 'Marque': 'Condor', 'Référence': 'CRS81NDX', 'Catégorie': 'Réfrigérateur', 'Prix HT': '2740.000 TND' } },
+            { id: 33, name: 'Clim Condor 12KBTU SUPER TROPICAL ALPHA', brand: 'Condor', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'CS12-AL84T3', price: 1540, img: 'img/clim.png', isNew: false, desc: 'Condor - Réf: CS12-AL84T3', specs: { 'Marque': 'Condor', 'Référence': 'CS12-AL84T3', 'Catégorie': 'Climatiseur', 'Prix HT': '1540.000 TND' } },
+            { id: 34, name: 'Table de cuiss condor 4Feux Fonte INOX', brand: 'Condor', category: 'ENCASTRABLE', categoryLabel: 'Encastrable', reference: 'CTE64WAS1X', price: 304, img: 'img/encastrable.png', isNew: false, desc: 'Condor - Réf: CTE64WAS1X', specs: { 'Marque': 'Condor', 'Référence': 'CTE64WAS1X', 'Catégorie': 'Encastrable', 'Prix HT': '304.000 TND' } },
+            { id: 35, name: 'Table de cuiss condor encast 5Feux-WOK Fonte /INOX', brand: 'Condor', category: 'ENCASTRABLE', categoryLabel: 'Encastrable', reference: 'CTE75W-FL2X', price: 552, img: 'img/encastrable.png', isNew: false, desc: 'Condor - Réf: CTE75W-FL2X', specs: { 'Marque': 'Condor', 'Référence': 'CTE75W-FL2X', 'Catégorie': 'Encastrable', 'Prix HT': '552.000 TND' } },
+            { id: 36, name: 'Hotte condor casquette 60cm/320m3/h/inox', brand: 'Condor', category: 'ENCASTRABLE', categoryLabel: 'Encastrable', reference: 'CH-Q6300X', price: 185, img: 'img/encastrable.png', isNew: false, desc: 'Condor - Réf: CH-Q6300X', specs: { 'Marque': 'Condor', 'Référence': 'CH-Q6300X', 'Catégorie': 'Encastrable', 'Prix HT': '185.000 TND' } },
+            { id: 37, name: 'Hotte condor casquette 60cm/320 m3/h/noire', brand: 'Condor', category: 'ENCASTRABLE', categoryLabel: 'Encastrable', reference: 'CH-Q6300N', price: 185, img: 'img/encastrable.png', isNew: false, desc: 'Condor - Réf: CH-Q6300N', specs: { 'Marque': 'Condor', 'Référence': 'CH-Q6300N', 'Catégorie': 'Encastrable', 'Prix HT': '185.000 TND' } },
+            { id: 38, name: 'Hotte condor murale décorative 60cm Miroir/Noir', brand: 'Condor', category: 'ENCASTRABLE', categoryLabel: 'Encastrable', reference: 'CH-A640XGB', price: 365, img: 'img/encastrable.png', isNew: false, desc: 'Condor - Réf: CH-A640XGB', specs: { 'Marque': 'Condor', 'Référence': 'CH-A640XGB', 'Catégorie': 'Encastrable', 'Prix HT': '365.000 TND' } },
+            { id: 39, name: 'Hotte condor cheminée 60cm/450m3/h INOX', brand: 'Condor', category: 'ENCASTRABLE', categoryLabel: 'Encastrable', reference: 'CH-L640X', price: 415, img: 'img/encastrable.png', isNew: false, desc: 'Condor - Réf: CH-L640X', specs: { 'Marque': 'Condor', 'Référence': 'CH-L640X', 'Catégorie': 'Encastrable', 'Prix HT': '415.000 TND' } },
+            { id: 40, name: 'ROBOT DE CUISINE CONDOR MUIti F MASTER MIX 750W', brand: 'Condor', category: 'PEM', categoryLabel: 'Petit Électroménager', reference: 'RC-MM1SN', price: 230, img: 'img/pem.png', isNew: false, desc: 'Condor - Réf: RC-MM1SN', specs: { 'Marque': 'Condor', 'Référence': 'RC-MM1SN', 'Catégorie': 'Petit Électroménager', 'Prix HT': '230.000 TND' } },
+            { id: 41, name: 'ROBOT DE CUISINE CONDOR MULTI FONCTION Versa Ch', brand: 'Condor', category: 'PEM', categoryLabel: 'Petit Électroménager', reference: 'RC-MV1SN', price: 345, img: 'img/pem.png', isNew: false, desc: 'Condor - Réf: RC-MV1SN', specs: { 'Marque': 'Condor', 'Référence': 'RC-MV1SN', 'Catégorie': 'Petit Électroménager', 'Prix HT': '345.000 TND' } },
+            { id: 42, name: 'ROBOT DE CUISINE CONDOR Mono F MASTER MIX 750W', brand: 'Condor', category: 'PEM', categoryLabel: 'Petit Électroménager', reference: 'RC-MU1SN', price: 195, img: 'img/pem.png', isNew: false, desc: 'Condor - Réf: RC-MU1SN', specs: { 'Marque': 'Condor', 'Référence': 'RC-MU1SN', 'Catégorie': 'Petit Électroménager', 'Prix HT': '195.000 TND' } },
+            { id: 43, name: 'BATTEUR MAIN CONDOR MASTER MIX 400W/INOX-NOIR', brand: 'Condor', category: 'PEM', categoryLabel: 'Petit Électroménager', reference: 'BT-MH2XN', price: 62, img: 'img/pem.png', isNew: false, desc: 'Condor - Réf: BT-MH2XN', specs: { 'Marque': 'Condor', 'Référence': 'BT-MH2XN', 'Catégorie': 'Petit Électroménager', 'Prix HT': '62.000 TND' } },
+            { id: 44, name: 'Ref NF Combiné Hisense 320 Litres Silver AFF/FONT', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RB1N300NMC/(RD39)', price: 1815, img: 'img/ref.png', isNew: false, desc: 'Hisense - Réf: RB1N300NMC/(RD39)', specs: { 'Marque': 'Hisense', 'Référence': 'RB1N300NMC/(RD39)', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1815.000 TND' } },
+            { id: 45, name: 'Ref NF Combiné Hisense 320 Litres NOIR AFF/FONT', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RB1N300NMF1', price: 1840, img: 'img/ref.png', isNew: false, desc: 'Hisense - Réf: RB1N300NMF1', specs: { 'Marque': 'Hisense', 'Référence': 'RB1N300NMF1', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1840.000 TND' } },
+            { id: 46, name: 'Ref NF Hisense 470 L premium inox Aff/Fontaine', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RT-60W', price: 2020, img: 'img/ref.png', isNew: false, desc: 'Hisense - Réf: RT-60W', specs: { 'Marque': 'Hisense', 'Référence': 'RT-60W', 'Catégorie': 'Réfrigérateur', 'Prix HT': '2020.000 TND' } },
+            { id: 47, name: 'Ref NF SBS INOX SILVER Hisense 518 L', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RS3P518NMC/(RC67)', price: 3050, img: 'img/ref.png', isNew: false, desc: 'Hisense - Réf: RS3P518NMC/(RC67)', specs: { 'Marque': 'Hisense', 'Référence': 'RS3P518NMC/(RC67)', 'Catégorie': 'Réfrigérateur', 'Prix HT': '3050.000 TND' } },
+            { id: 48, name: 'Réf SBS Hisense 640 L Font/Aff Inox Silver', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RS5P668NMC/ RC 87)', price: 3680, img: 'img/ref.png', isNew: false, desc: 'Hisense - Réf: RS5P668NMC/ RC 87)', specs: { 'Marque': 'Hisense', 'Référence': 'RS5P668NMC/ RC 87)', 'Catégorie': 'Réfrigérateur', 'Prix HT': '3680.000 TND' } },
+            { id: 49, name: 'Congélateur horizontal hisense convertible blanc 238L', brand: 'Hisense', category: 'CONG', categoryLabel: 'Congélateur', reference: 'FC-33DT4SAW', price: 970, img: 'img/congelateur.png', isNew: false, desc: 'Hisense - Réf: FC-33DT4SAW', specs: { 'Marque': 'Hisense', 'Référence': 'FC-33DT4SAW', 'Catégorie': 'Congélateur', 'Prix HT': '970.000 TND' } },
+            { id: 50, name: 'Congélateur horizontal hisense convertible blanc 286 L', brand: 'Hisense', category: 'CONG', categoryLabel: 'Congélateur', reference: 'FC-40DT4SAW1', price: 1020, img: 'img/congelateur.png', isNew: false, desc: 'Hisense - Réf: FC-40DT4SAW1', specs: { 'Marque': 'Hisense', 'Référence': 'FC-40DT4SAW1', 'Catégorie': 'Congélateur', 'Prix HT': '1020.000 TND' } },
+            { id: 51, name: 'Congélateur horizontal HISENSE 297 Litres Blanc', brand: 'Hisense', category: 'CONG', categoryLabel: 'Congélateur', reference: 'FC-39DD', price: 1170, img: 'img/congelateur.png', isNew: false, desc: 'Hisense - Réf: FC-39DD', specs: { 'Marque': 'Hisense', 'Référence': 'FC-39DD', 'Catégorie': 'Congélateur', 'Prix HT': '1170.000 TND' } },
+            { id: 52, name: 'MAL Top Hisense 14 kg/Titanium Silver', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT3K1423UT', price: 1550, img: 'img/mal.png', isNew: false, desc: 'Hisense - Réf: WT3K1423UT', specs: { 'Marque': 'Hisense', 'Référence': 'WT3K1423UT', 'Catégorie': 'Machine à Laver', 'Prix HT': '1550.000 TND' } },
+            { id: 53, name: 'MAL Top Hisense 18 kg/dark silver', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT311823UB', price: 1660, img: 'img/mal.png', isNew: false, desc: 'Hisense - Réf: WT311823UB', specs: { 'Marque': 'Hisense', 'Référence': 'WT311823UB', 'Catégorie': 'Machine à Laver', 'Prix HT': '1660.000 TND' } },
+            { id: 54, name: 'Mal Frontale Hisense 8Kg/1400 Trs Inverter STEAM Titanium Silver', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WFQP8014EVMT', price: 1200, img: 'img/mal.png', isNew: false, desc: 'Hisense - Réf: WFQP8014EVMT', specs: { 'Marque': 'Hisense', 'Référence': 'WFQP8014EVMT', 'Catégorie': 'Machine à Laver', 'Prix HT': '1200.000 TND' } },
+            { id: 55, name: 'MAL HISENSE 10.5 KG SMART INVERTER BLANC', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WF3S1043BW', price: 1440, img: 'img/mal.png', isNew: false, desc: 'Hisense - Réf: WF3S1043BW', specs: { 'Marque': 'Hisense', 'Référence': 'WF3S1043BW', 'Catégorie': 'Machine à Laver', 'Prix HT': '1440.000 TND' } },
+            { id: 56, name: 'MAL Hisense 12 Kg Smart Inverter Vapeur Titanium', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WF3S1243BT', price: 1620, img: 'img/mal.png', isNew: false, desc: 'Hisense - Réf: WF3S1243BT', specs: { 'Marque': 'Hisense', 'Référence': 'WF3S1243BT', 'Catégorie': 'Machine à Laver', 'Prix HT': '1620.000 TND' } },
+            { id: 57, name: 'TV HISENSE 43" SMART UHD ANDROID', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '43A4200G', price: 828, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: 43A4200G', specs: { 'Marque': 'Hisense', 'Référence': '43A4200G', 'Catégorie': 'Téléviseur', 'Prix HT': '828.000 TND' } },
+            { id: 58, name: 'TV HISENSE 50" SMART UHD 4K GOOGLE TV', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '50A6GN', price: 1190, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: 50A6GN', specs: { 'Marque': 'Hisense', 'Référence': '50A6GN', 'Catégorie': 'Téléviseur', 'Prix HT': '1190.000 TND' } },
+            { id: 59, name: 'TV Hisense 55" 4K UHD A6500N Series GOOGLE TV', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: 'S5A6500N', price: 1340, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: S5A6500N', specs: { 'Marque': 'Hisense', 'Référence': 'S5A6500N', 'Catégorie': 'Téléviseur', 'Prix HT': '1340.000 TND' } },
+            { id: 60, name: 'TV Hisense 65" 4K UHD A6500N Series GOOGLE TV', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '65A6500N', price: 2215, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: 65A6500N', specs: { 'Marque': 'Hisense', 'Référence': '65A6500N', 'Catégorie': 'Téléviseur', 'Prix HT': '2215.000 TND' } },
+            { id: 61, name: 'TV Hisense 75" 4K UHD A6500N Series GOOGLE TV', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '75A6500N', price: 3600, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: 75A6500N', specs: { 'Marque': 'Hisense', 'Référence': '75A6500N', 'Catégorie': 'Téléviseur', 'Prix HT': '3600.000 TND' } },
+            { id: 62, name: 'TV HISENSE 85" SMART UHD 4K', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '85A6N +43A4200G', price: 5920, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: 85A6N +43A4200G', specs: { 'Marque': 'Hisense', 'Référence': '85A6N +43A4200G', 'Catégorie': 'Téléviseur', 'Prix HT': '5920.000 TND' } },
+            { id: 63, name: 'TV HISENSE 85" QLED UHD 4K Smart TV', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '85Q6N +43A4200G', price: 6120, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: 85Q6N +43A4200G', specs: { 'Marque': 'Hisense', 'Référence': '85Q6N +43A4200G', 'Catégorie': 'Téléviseur', 'Prix HT': '6120.000 TND' } },
+            { id: 64, name: 'TV HISENSE QLED UHD 100" /SERIE Q7', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '100Q7N+50A6GN', price: 9240, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: 100Q7N+50A6GN', specs: { 'Marque': 'Hisense', 'Référence': '100Q7N+50A6GN', 'Catégorie': 'Téléviseur', 'Prix HT': '9240.000 TND' } },
+            { id: 65, name: 'TV HISENSE 100" 4K UHD SMART TV X-Fusion Laser Light', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '100L5GE', price: 13200, img: 'img/tv.png', isNew: false, desc: 'Hisense - Réf: 100L5GE', specs: { 'Marque': 'Hisense', 'Référence': '100L5GE', 'Catégorie': 'Téléviseur', 'Prix HT': '13200.000 TND' } },
+            { id: 66, name: 'CLIMATISEUR HISENSE 12000 CF INVERTER', brand: 'Hisense', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'AS-12UW4S', price: 1610, img: 'img/clim.png', isNew: false, desc: 'Hisense - Réf: AS-12UW4S', specs: { 'Marque': 'Hisense', 'Référence': 'AS-12UW4S', 'Catégorie': 'Climatiseur', 'Prix HT': '1610.000 TND' } },
+            { id: 67, name: 'CLIMATISEUR HISENSE 24000 CFON/OFF', brand: 'Hisense', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'AS-24HW4S', price: 2440, img: 'img/clim.png', isNew: false, desc: 'Hisense - Réf: AS-24HW4S', specs: { 'Marque': 'Hisense', 'Référence': 'AS-24HW4S', 'Catégorie': 'Climatiseur', 'Prix HT': '2440.000 TND' } },
+            { id: 68, name: 'CLIMATISEUR HISENSE 24000 CFinverter', brand: 'Hisense', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'AS-24UW4S', price: 2640, img: 'img/clim.png', isNew: false, desc: 'Hisense - Réf: AS-24UW4S', specs: { 'Marque': 'Hisense', 'Référence': 'AS-24UW4S', 'Catégorie': 'Climatiseur', 'Prix HT': '2640.000 TND' } },
+            { id: 69, name: 'Four Mico-ondes Hisense 20 L/700W silver', brand: 'Hisense', category: 'MICRO ONDE', categoryLabel: 'Micro-ondes', reference: 'H20MOMP1HG', price: 294, img: 'img/micro-onde.png', isNew: false, desc: 'Hisense - Réf: H20MOMP1HG', specs: { 'Marque': 'Hisense', 'Référence': 'H20MOMP1HG', 'Catégorie': 'Micro-ondes', 'Prix HT': '294.000 TND' } },
+            { id: 70, name: 'Mico-ondes Hisense 20 L/700W blanc contrôle digital', brand: 'Hisense', category: 'MICRO ONDE', categoryLabel: 'Micro-ondes', reference: 'H20MOWS11', price: 305, img: 'img/micro-onde.png', isNew: false, desc: 'Hisense - Réf: H20MOWS11', specs: { 'Marque': 'Hisense', 'Référence': 'H20MOWS11', 'Catégorie': 'Micro-ondes', 'Prix HT': '305.000 TND' } },
+            { id: 71, name: 'Mico-ondes Hisense 25 L/900W blanc contrôle digital', brand: 'Hisense', category: 'MICRO ONDE', categoryLabel: 'Micro-ondes', reference: 'H25MOWS7H', price: 405, img: 'img/micro-onde.png', isNew: false, desc: 'Hisense - Réf: H25MOWS7H', specs: { 'Marque': 'Hisense', 'Référence': 'H25MOWS7H', 'Catégorie': 'Micro-ondes', 'Prix HT': '405.000 TND' } },
+            { id: 72, name: 'Four/Mico-ondes Hisense 25 L/900W noir contrôle digital', brand: 'Hisense', category: 'MICRO ONDE', categoryLabel: 'Micro-ondes', reference: 'H25MOBS6G', price: 385, img: 'img/micro-onde.png', isNew: false, desc: 'Hisense - Réf: H25MOBS6G', specs: { 'Marque': 'Hisense', 'Référence': 'H25MOBS6G', 'Catégorie': 'Micro-ondes', 'Prix HT': '385.000 TND' } },
+            { id: 73, name: 'Aspirateur Hisense sans sac 2300W ROUGE', brand: 'Hisense', category: 'PEM', categoryLabel: 'Petit Électroménager', reference: 'VC2302GALRCY', price: 330, img: 'img/pem.png', isNew: false, desc: 'Hisense - Réf: VC2302GALRCY', specs: { 'Marque': 'Hisense', 'Référence': 'VC2302GALRCY', 'Catégorie': 'Petit Électroménager', 'Prix HT': '330.000 TND' } },
+            { id: 74, name: 'Air Fryer Hisense 6,7 L/1350W/Digital', brand: 'Hisense', category: 'PEM', categoryLabel: 'Petit Électroménager', reference: 'H06AFBS2S3', price: 250, img: 'img/pem.png', isNew: false, desc: 'Hisense - Réf: H06AFBS2S3', specs: { 'Marque': 'Hisense', 'Référence': 'H06AFBS2S3', 'Catégorie': 'Petit Électroménager', 'Prix HT': '250.000 TND' } },
+            { id: 75, name: 'Blender Hisense 1,5 L BL/Inox 500 W', brand: 'Hisense', category: 'PEM', categoryLabel: 'Petit Électroménager', reference: 'H15TBWESZA', price: 107, img: 'img/pem.png', isNew: false, desc: 'Hisense - Réf: H15TBWESZA', specs: { 'Marque': 'Hisense', 'Référence': 'H15TBWESZA', 'Catégorie': 'Petit Électroménager', 'Prix HT': '107.000 TND' } },
+            { id: 76, name: 'REF TCL Double portes 333L No Frost Inox', brand: 'TCL', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'P333 TMS', price: 1750, img: 'img/ref.png', isNew: false, desc: 'Double portes, Capacité nette: 333L, Réfrigérateur: 256L, Congélateur: 77L, Classe A+, Total No Frost, LED, Inox, 600x1700x665mm', specs: { 'Marque': 'TCL', 'Référence': 'P333 TMS', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1750.000 TND' } },
+            { id: 77, name: 'REF TCL Double portes 420L No Frost Inverter Inox', brand: 'TCL', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'P425 TMN', price: 2225, img: 'img/ref.png', isNew: false, desc: 'Double portes, Capacité nette: 420L, Réfrigérateur: 319L, Congélateur: 101L, Total No Frost, Inverter, LED, Twist Ice Maker, 706x1720x686mm, Garantie compresseur 10 ans', specs: { 'Marque': 'TCL', 'Référence': 'P425 TMN', 'Catégorie': 'Réfrigérateur', 'Prix HT': '2225.000 TND' } },
+            { id: 78, name: 'REF TCL Double portes 465L No Frost Inverter Inox', brand: 'TCL', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'P465 TMN', price: 2300, img: 'img/ref.png', isNew: false, desc: 'Double portes, Capacité nette: 465L, Réfrigérateur: 364L, Congélateur: 101L, Total No Frost, Inverter, Affichage LED externe, Inox, Twist Ice Maker, 706x1850x686mm, Garantie compresseur 10 ans', specs: { 'Marque': 'TCL', 'Référence': 'P465 TMN', 'Catégorie': 'Réfrigérateur', 'Prix HT': '2300.000 TND' } },
+            { id: 79, name: 'REF TCL Double portes 540L No Frost Inverter Distributeur Inox', brand: 'TCL', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'P545 TMN', price: 2680, img: 'img/ref.png', isNew: false, desc: 'Double portes, Capacité nette: 540L, Réfrigérateur: 398L, Congélateur: 142L, Distributeur d\'eau, Total No Frost, Inverter, Affichage LED externe, Twist Ice Maker, Inox, 836x1850x688mm, Garantie compresseur 10 ans', specs: { 'Marque': 'TCL', 'Référence': 'P545 TMN', 'Catégorie': 'Réfrigérateur', 'Prix HT': '2680.000 TND' } },
+            { id: 80, name: 'REF TCL Combiné 318L No Frost Inox', brand: 'TCL', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'P315 BFN', price: 1950, img: 'img/ref.png', isNew: false, desc: 'Combiné, Capacité nette: 318L, Réfrigérateur: 219L, Congélateur: 99L, Classe A+, Total No Frost, Affichage LED externe, Twist Ice Maker, Inox, 595x1850x630mm', specs: { 'Marque': 'TCL', 'Référence': 'P315 BFN', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1950.000 TND' } },
+            { id: 81, name: 'REF TCL Quatre Portes 512L No Frost Inverter Inox', brand: 'TCL', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'C512 CDN', price: 4900, img: 'img/ref.png', isNew: false, desc: 'Quatre Portes, Capacité nette: 512L, Réfrigérateur: 348L, Congélateur: 148L, Zone flexible: 16L, Total No Frost, Inverter, Multi-air flow, Affichage LED, Sky Power LED, Twist Ice Maker, Inox, 909x690x1900mm, Garantie compresseur 10 ans', specs: { 'Marque': 'TCL', 'Référence': 'C512 CDN', 'Catégorie': 'Réfrigérateur', 'Prix HT': '4900.000 TND' } },
+            { id: 82, name: 'REF TCL Double portes 286L No Frost Silver', brand: 'TCL', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'P370', price: 1720, img: 'img/ref.png', isNew: false, desc: 'Double portes, Capacité nette: 286L, Réfrigérateur: 225L, Congélateur: 61L, Classe A+, Total No Frost, Contrôle électronique, Affichage LED, Silver, 545x1770x620mm', specs: { 'Marque': 'TCL', 'Référence': 'P370', 'Catégorie': 'Réfrigérateur', 'Prix HT': '1720.000 TND' } },
+            { id: 83, name: 'REF TCL Combiné 417L No Frost Inverter Inox', brand: 'TCL', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'P417 BFN', price: 2575, img: 'img/ref.png', isNew: false, desc: 'Combiné, Capacité nette: 417L, Réfrigérateur: 276L, Congélateur: 141L, Classe A+, Total No Frost, Inverter, Affichage LED, Grand bac à fruits et légumes, Twist Ice Maker, Inox', specs: { 'Marque': 'TCL', 'Référence': 'P417 BFN', 'Catégorie': 'Réfrigérateur', 'Prix HT': '2575.000 TND' } }
+        ];
+
+        const categoryLabels = {
+            'MAL': 'Machine à Laver',
+            'LAVE VAISSELLE': 'Lave-Vaisselle',
+            'REF': 'Réfrigérateur',
+            'CONG': 'Congélateur',
+            'CLIM': 'Climatiseur',
+            'ENCASTRABLE': 'Encastrable',
+            'PEM': 'Petit Électroménager',
+            'TV': 'Téléviseur',
+            'MICRO ONDE': 'Micro-ondes'
+        };
+
+        let cart = [];
+        let activeCategory = 'Tous';
+        let activeBrand = 'Toutes';
+        let filterNew = false;
+        let filterDiscount = false;
+        let currentPage = 1;
+        const ITEMS_PER_PAGE = 10;
+        const categories = ['Tous', ...new Set(products.map(p => p.category))];
+        const brands = ['Toutes', ...new Set(products.map(p => p.brand))];
+
+        function saveState() {
+            const state = { activeCategory, activeBrand, filterNew, filterDiscount, currentPage };
+            localStorage.setItem('dtech_store_state', JSON.stringify(state));
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem('dtech_store_state');
+            if (saved) {
+                try {
+                    const state = JSON.parse(saved);
+                    if (state.activeCategory) activeCategory = state.activeCategory;
+                    if (state.activeBrand) activeBrand = state.activeBrand;
+                    if (typeof state.filterNew === 'boolean') filterNew = state.filterNew;
+                    if (typeof state.filterDiscount === 'boolean') filterDiscount = state.filterDiscount;
+                    if (state.currentPage) currentPage = state.currentPage;
+                } catch (e) { console.error('Failed to load state', e); }
+            }
+        }
+
+        function init() {
+            loadState();
+            const savedCart = localStorage.getItem('dtech_cart');
+            if (savedCart) {
+                try {
+                    cart = JSON.parse(savedCart);
+                } catch (e) { console.error('Failed to load cart', e); }
+            }
+            updateCartUI();
+            renderFilters();
+            renderHomeSections();
+            handleRoute();
+        }
+
+        // Router
+        window.addEventListener('hashchange', handleRoute);
+
+        function handleRoute() {
+            const hash = window.location.hash || '#home';
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+
+            if (hash === '#home') {
+                document.getElementById('view-home').classList.add('active');
+                document.querySelector('.nav-links a[href="#home"]').classList.add('active');
+            } else if (hash === '#products') {
+                document.getElementById('view-products').classList.add('active');
+                document.querySelector('.nav-links a[href="#products"]').classList.add('active');
+                renderProducts();
+            } else if (hash.startsWith('#product/')) {
+                const id = parseInt(hash.split('/')[1]);
+                renderProductDetail(id);
+                document.getElementById('view-product-detail').classList.add('active');
+            } else if (hash === '#checkout') {
+                if (cart.length === 0) { window.location.hash = '#products'; return; }
+                renderCheckoutSummary();
+                document.getElementById('view-checkout').classList.add('active');
+            }
+            window.scrollTo(0, 0);
+        }
+
+        // Renderers
+        function renderHomeSections() {
+            const newProds = products.filter(p => p.isNew);
+            const discProds = products.filter(p => p.discountPrice);
+
+            document.getElementById('home-new-products').innerHTML = newProds.length > 0
+                ? newProds.slice(0, 4).map(p => generateProductCard(p)).join('')
+                : '<p style="grid-column:1/-1; text-align:center; color:var(--gray); padding: 2rem;">Aucune nouveauté pour le moment.</p>';
+            document.getElementById('home-discount-products').innerHTML = discProds.length > 0
+                ? discProds.slice(0, 4).map(p => generateProductCard(p)).join('')
+                : '<p style="grid-column:1/-1; text-align:center; color:var(--gray); padding: 2rem;">Aucune promotion pour le moment.</p>';
+        }
+
+        function renderFilters() {
+            const filtersContainer = document.getElementById('filters');
+
+            const brandFiltered = activeBrand === 'Toutes' ? products : products.filter(p => p.brand === activeBrand);
+            const fullyFiltered = products.filter(p =>
+                (activeBrand === 'Toutes' || p.brand === activeBrand) &&
+                (activeCategory === 'Tous' || p.category === activeCategory)
+            );
+
+            // Count products per brand (always absolute)
+            const brandCounts = {};
+            brands.forEach(b => { brandCounts[b] = b === 'Toutes' ? products.length : products.filter(p => p.brand === b).length; });
+
+            // Count products per category (filtered by active brand)
+            const catCounts = {};
+            categories.forEach(c => { catCounts[c] = c === 'Tous' ? brandFiltered.length : brandFiltered.filter(p => p.category === c).length; });
+
+            // Count filtres (filtered by both brand and category)
+            const newCount = fullyFiltered.filter(p => p.isNew).length;
+            const discCount = fullyFiltered.filter(p => p.discountPrice).length;
+
+            const hasActiveFilters = activeCategory !== 'Tous' || activeBrand !== 'Toutes' || filterNew || filterDiscount;
+
+            // ROW 1: Brand filters
+            let html = '<div class="filter-row">';
+            html += '<span class="filter-label"><i class="fa-solid fa-building"></i> Marque</span>';
+            html += '<div class="filter-pills">';
+            html += brands.map(brand =>
+                `<button class="filter-btn ${activeBrand === brand ? 'active' : ''}" onclick="filterByBrand('${brand}')">${brand}<span class="count-badge">${brandCounts[brand]}</span></button>`
+            ).join('');
+            html += '</div>';
+            html += '</div>';
+
+            // ROW 2: Category filters
+            html += '<div class="filter-row">';
+            html += '<span class="filter-label"><i class="fa-solid fa-layer-group"></i> Catégorie</span>';
+            html += '<div class="filter-pills">';
+            html += categories.map(cat => {
+                const label = cat === 'Tous' ? 'Tous' : (categoryLabels[cat] || cat);
+                return `<button class="filter-btn ${activeCategory === cat ? 'active' : ''}" onclick="filterProducts('${cat}')">${label}<span class="count-badge">${catCounts[cat]}</span></button>`;
+            }).join('');
+            html += '</div>';
+            html += '</div>';
+
+            // ROW 3: Tag filters + Clear
+            html += '<div class="filter-row">';
+            html += '<span class="filter-label"><i class="fa-solid fa-sliders"></i> Filtres</span>';
+            html += '<div class="filter-pills">';
+            html += `<button class="filter-btn filter-btn--new ${filterNew ? 'active' : ''}" onclick="toggleNewFilter()"><i class="fa-solid fa-sparkles"></i> Nouveautés<span class="count-badge">${newCount}</span></button>`;
+            html += `<button class="filter-btn filter-btn--promo ${filterDiscount ? 'active' : ''}" onclick="toggleDiscountFilter()"><i class="fa-solid fa-tag"></i> Promotions<span class="count-badge">${discCount}</span></button>`;
+            html += '</div>';
+            if (hasActiveFilters) {
+                html += `<button class="filter-clear-btn" onclick="clearAllFilters()"><i class="fa-solid fa-xmark"></i> Réinitialiser</button>`;
+            }
+            html += '</div>';
+
+            filtersContainer.innerHTML = html;
+        }
+
+        function clearAllFilters() {
+            activeCategory = 'Tous';
+            activeBrand = 'Toutes';
+            filterNew = false;
+            filterDiscount = false;
+            currentPage = 1;
+            saveState();
+            renderFilters();
+            renderProducts();
+        }
+
+        function toggleNewFilter() {
+            filterNew = !filterNew;
+            currentPage = 1;
+            saveState();
+            renderFilters();
+            renderProducts();
+        }
+
+        function toggleDiscountFilter() {
+            filterDiscount = !filterDiscount;
+            currentPage = 1;
+            saveState();
+            renderFilters();
+            renderProducts();
+        }
+
+        function filterProducts(category) {
+            activeCategory = category;
+            currentPage = 1;
+            saveState();
+            renderFilters();
+            renderProducts();
+        }
+
+        function filterByBrand(brand) {
+            activeBrand = brand;
+            currentPage = 1;
+            saveState();
+            renderFilters();
+            renderProducts();
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            saveState();
+            renderProducts();
+            document.getElementById('view-products').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            let filtered = activeCategory === 'Tous' ? [...products] : products.filter(p => p.category === activeCategory);
+
+            if (activeBrand !== 'Toutes') filtered = filtered.filter(p => p.brand === activeBrand);
+            if (filterNew) filtered = filtered.filter(p => p.isNew);
+            if (filterDiscount) filtered = filtered.filter(p => p.discountPrice);
+
+            // Product count
+            const countEl = document.getElementById('products-count');
+            if (countEl) countEl.textContent = filtered.length + ' produit' + (filtered.length > 1 ? 's' : '');
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<p style="grid-column: 1/-1; text-align:center; color: var(--gray); font-size: 1.2rem; padding: 3rem 0;"><i class="fa-solid fa-box-open" style="font-size:3rem; display:block; margin-bottom:1rem; opacity:0.3"></i>Aucun produit ne correspond à ces critères.</p>';
+            } else {
+                // Pagination calculation
+                const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+                if (currentPage > totalPages) currentPage = Math.max(1, totalPages); // safety reset
+
+                const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+                const paginatedItems = filtered.slice(startIdx, startIdx + ITEMS_PER_PAGE);
+
+                let html = paginatedItems.map(p => generateProductCard(p)).join('');
+
+                // Add pagination controls if needed
+                if (totalPages > 1) {
+                    let paginationHTML = '<div class="pagination">';
+                    paginationHTML += `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})"><i class="fa-solid fa-chevron-left"></i></button>`;
+
+                    for (let i = 1; i <= totalPages; i++) {
+                        paginationHTML += `<button class="page-btn ${currentPage === i ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+                    }
+
+                    paginationHTML += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} onclick="changePage(${currentPage + 1})"><i class="fa-solid fa-chevron-right"></i></button>`;
+                    paginationHTML += '</div>';
+                    html += paginationHTML;
+                }
+
+                grid.innerHTML = html;
+            }
+        }
+
+        function generateProductCard(p) {
+            const priceHTML = p.discountPrice
+                ? `<div class="product-price">${p.discountPrice.toFixed(3)} TND <span class="old-price">${p.price.toFixed(3)} TND</span></div>`
+                : `<div class="product-price">${p.price.toFixed(3)} TND</div>`;
+            const tag = p.isNew ? '<span class="tag new">NOUVEAU</span>' : (p.discountPrice ? '<span class="tag discount">PROMO</span>' : '');
+            const brandBadge = `<span style="display:inline-block; padding:0.2rem 0.7rem; background:rgba(0,168,255,0.1); border-radius:8px; font-size:0.75rem; font-weight:700; color:var(--secondary); margin-bottom:0.3rem;">${p.brand}</span>`;
+
+            return `
+    <a href="#product/${p.id}" class="product-card">
+      ${tag}
+      <div class="product-img-wrap"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+      ${brandBadge}
+      <div class="product-category">${p.categoryLabel || p.category}</div>
+      <h3 class="product-title">${p.name}</h3>
+      ${priceHTML}
+      <button class="add-to-cart" onclick="event.preventDefault(); addToCart(event, ${p.id})">
+        <i class="fa-solid fa-plus"></i> Ajouter au panier
+      </button>
+    </a>
+  `;
+        }
+
+        function renderProductDetail(id) {
+            const p = products.find(p => p.id === id);
+            if (!p) return;
+            const priceHTML = p.discountPrice
+                ? `${p.discountPrice.toFixed(3)} TND <span class="old-price" style="font-size:1.5rem">${p.price.toFixed(3)} TND</span>`
+                : `${p.price.toFixed(3)} TND`;
+
+            const specsHTML = Object.entries(p.specs).map(([k, v]) => `<li><span>${k}</span><span>${v}</span></li>`).join('');
+
+            document.getElementById('product-detail-container').innerHTML = `
+    <a href="javascript:history.back()" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Retour</a>
+    <div class="product-detail-layout">
+      <div class="product-detail-img">
+        <img src="${p.img}" alt="${p.name}">
+      </div>
+      <div class="product-detail-info">
+        <span style="display:inline-block; padding:0.3rem 1rem; background:rgba(0,168,255,0.1); border-radius:10px; font-size:0.85rem; font-weight:700; color:var(--secondary); margin-bottom:1rem;">${p.brand}</span>
+        <div class="product-category" style="margin-bottom: 0.5rem;">${p.categoryLabel || p.category}</div>
+        <h1>${p.name}</h1>
+        <div style="color:var(--gray); font-size:0.95rem; margin-bottom:1rem;">Réf: ${p.reference}</div>
+        <div class="product-detail-price">${priceHTML}</div>
+        <p class="product-detail-desc">${p.desc}</p>
+        
+        <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Spécifications Techniques</h3>
+        <ul class="specs-list">${specsHTML}</ul>
+        
+        <button class="btn btn-primary" style="width:100%; padding: 1.2rem; font-size: 1.2rem;" onclick="addToCart(event, ${p.id}, true)">
+          <i class="fa-solid fa-cart-shopping"></i> Ajouter au panier
+        </button>
+      </div>
+    </div>
+  `;
+        }
+
+        function renderCheckoutSummary() {
+            const list = document.getElementById('checkout-items-list');
+            list.innerHTML = cart.map(item => {
+                const finalPrice = item.discountPrice || item.price;
+                return `
+    <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem; padding-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.05)">
+      <img src="${item.img}" style="width:60px; height:60px; object-fit:contain; background:rgba(255,255,255,0.02); border-radius:10px; padding:0.5rem">
+      <div style="flex:1">
+        <h4 style="font-size:1rem; margin-bottom:0.2rem">${item.name}</h4>
+        <div style="color:var(--gray); font-size:0.9rem">Qté: ${item.quantity}</div>
+      </div>
+      <div style="font-family:'Outfit'; font-weight:700; color:var(--secondary)">${(finalPrice * item.quantity).toFixed(3)} TND</div>
+    </div>
+    `
+            }).join('');
+
+            const total = cart.reduce((sum, item) => sum + ((item.discountPrice || item.price) * item.quantity), 0);
+            document.getElementById('checkout-total-price').innerText = total.toFixed(3) + ' TND';
+        }
+
+
+        // Cart Logic
+        function addToCart(e, productId, isDetail = false) {
+            const product = products.find(p => p.id === productId);
+            const existing = cart.find(item => item.id === productId);
+
+            if (existing) existing.quantity += 1;
+            else cart.push({ ...product, quantity: 1 });
+
+            updateCartUI();
+
+            const btn = e.currentTarget;
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-check"></i> Ajouté';
+            btn.style.background = 'var(--secondary)';
+            if (!isDetail) btn.style.borderColor = 'var(--secondary)';
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.style.background = '';
+                btn.style.borderColor = '';
+            }, 1200);
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+            if (window.location.hash === '#checkout') {
+                if (cart.length === 0) window.location.hash = '#products';
+                else renderCheckoutSummary();
+            }
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const cartItems = document.getElementById('cart-items');
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div style="text-align:center; padding: 3rem 0; color:var(--gray);"><i class="fa-solid fa-cart-shopping" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i><p>Votre panier est vide.</p></div>';
+            } else {
+                cartItems.innerHTML = cart.map(item => {
+                    const finalPrice = item.discountPrice || item.price;
+                    return `
+      <div class="cart-item">
+        <img src="${item.img}" alt="${item.name}">
+        <div class="cart-item-info">
+          <div class="cart-item-title">${item.name}</div>
+          <div style="font-size: 0.9rem; color: var(--gray); display:flex; align-items:center; gap: 0.5rem; margin-top: 0.5rem;">
+            <span>Qté: ${item.quantity}</span>
+            <button onclick="removeFromCart(${item.id})" style="background:none;border:none;color:#ef4444;cursor:pointer; padding: 4px; font-size: 1rem; margin-left: auto;" title="Supprimer"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        </div>
+        <div class="cart-item-price">${(finalPrice * item.quantity).toFixed(3)} TND</div>
+      </div>
+    `}).join('');
+            }
+
+            const total = cart.reduce((sum, item) => sum + ((item.discountPrice || item.price) * item.quantity), 0);
+            document.getElementById('cart-total-price').innerText = total.toFixed(3) + ' TND';
+            localStorage.setItem('dtech_cart', JSON.stringify(cart));
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('active');
+            if (modal.classList.contains('active')) updateCartUI();
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const origHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Traitement...';
+
+            setTimeout(() => {
+                alert('Réservation confirmée ! Nous avons mis vos articles de côté. Veuillez vous rendre en magasin pour le paiement et le retrait.');
+                cart = [];
+                updateCartUI();
+                e.target.reset();
+                btn.innerHTML = origHTML;
+                window.location.hash = '#home';
+            }, 1500);
+        }
+
+        // Mobile Menu Logic
+        function toggleMenu() {
+            const nav = document.getElementById('nav-links');
+            const btn = document.getElementById('menu-btn');
+            nav.classList.toggle('active');
+            if (nav.classList.contains('active')) {
+                btn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        }
+        function closeMenu() {
+            const nav = document.getElementById('nav-links');
+            const btn = document.getElementById('menu-btn');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                btn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+
+</html>

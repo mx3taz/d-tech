@@ -1,0 +1,1496 @@
+[
+  {
+    "id": 1,
+    "name": "MAL CONDOR Semi- Auto 10.5 kg Tulipe",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WT10T1",
+    "price": 445,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WT10T1",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WT10T1",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "445.00 DA"
+    }
+  },
+  {
+    "id": 2,
+    "name": "MAL CONDOR Semi- Auto 10.5 kg Tulipe Bleu",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WT10T1BF",
+    "price": 445,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WT10T1BF",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WT10T1BF",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "445.00 DA"
+    }
+  },
+  {
+    "id": 3,
+    "name": "MAL CONDOR Semi-Auto 13 kg Tulipe",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WT13T1",
+    "price": 510,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WT13T1",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WT13T1",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "510.00 DA"
+    }
+  },
+  {
+    "id": 4,
+    "name": "MAL CONDOR Semi-Auto 13 kg Tulipe Bleu",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WT13T1BF",
+    "price": 510,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WT13T1BF",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WT13T1BF",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "510.00 DA"
+    }
+  },
+  {
+    "id": 5,
+    "name": "MAL Condor TOP 8kg Blanche",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WAT-KS3M34W",
+    "price": 675,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WAT-KS3M34W",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WAT-KS3M34W",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "675.00 DA"
+    }
+  },
+  {
+    "id": 6,
+    "name": "MAL Condor TOP 8kg GRIS",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WAT-KS3M34D",
+    "price": 705,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WAT-KS3M34D",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WAT-KS3M34D",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "705.00 DA"
+    }
+  },
+  {
+    "id": 7,
+    "name": "MALCondor Top 10,5 kg BL",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WL10-MS35W",
+    "price": 870,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WL10-MS35W",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WL10-MS35W",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "870.00 DA"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Mal Condor Top 10,5 kg Dark Silver",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WL10-MS35D",
+    "price": 915,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WL10-MS35D",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WL10-MS35D",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "915.00 DA"
+    }
+  },
+  {
+    "id": 9,
+    "name": "MAL Condor 6Kg/1200 Trs BLANC",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WF6-A12W",
+    "price": 840,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WF6-A12W",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WF6-A12W",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "840.00 DA"
+    }
+  },
+  {
+    "id": 10,
+    "name": "MAL Condor 6Kg/1000 Trs SILVER",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F610LS",
+    "price": 895,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F610LS",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F610LS",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "895.00 DA"
+    }
+  },
+  {
+    "id": 11,
+    "name": "MAL Condor 6Kg/1000 Trs Noir",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F610LB",
+    "price": 895,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F610LB",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F610LB",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "895.00 DA"
+    }
+  },
+  {
+    "id": 12,
+    "name": "MAL Condor 7Kg/1000 Trs SILVER",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F710L",
+    "price": 900,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F710L",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F710L",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "900.00 DA"
+    }
+  },
+  {
+    "id": 13,
+    "name": "MAL Condor 7Kg/1000 Trs SILVER",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F710LS",
+    "price": 955,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F710LS",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F710LS",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "955.00 DA"
+    }
+  },
+  {
+    "id": 14,
+    "name": "MAL Condor 7Kg/1000 Trs noir",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F710LB",
+    "price": 955,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F710LB",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F710LB",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "955.00 DA"
+    }
+  },
+  {
+    "id": 15,
+    "name": "MAL CONDOR 8KG 1200 trs BLANC",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WAF-KU241L3W",
+    "price": 1085,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WAF-KU241L3W",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WAF-KU241L3W",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1085.00 DA"
+    }
+  },
+  {
+    "id": 16,
+    "name": "MAL Condor 8KG 1200 trs BLACK",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F812DS",
+    "price": 1135,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F812DS",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F812DS",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1135.00 DA"
+    }
+  },
+  {
+    "id": 17,
+    "name": "MAL Condor 8KG 1200 trs BLACK",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F812DB",
+    "price": 1160,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F812DB",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F812DB",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1160.00 DA"
+    }
+  },
+  {
+    "id": 18,
+    "name": "MAL CONDOR FRONTAL 9KG 1200 TR/BL",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F912D",
+    "price": 1140,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F912D",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F912D",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1140.00 DA"
+    }
+  },
+  {
+    "id": 19,
+    "name": "MAL Condor 9KG 1200 trs Noir",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F9121B",
+    "price": 1260,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F9121B",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F9121B",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1260.00 DA"
+    }
+  },
+  {
+    "id": 20,
+    "name": "MAL Condor 9KG 120 ORPM Dark SILVER",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-F912DS",
+    "price": 1200,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-F912DS",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-F912DS",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1200.00 DA"
+    }
+  },
+  {
+    "id": 21,
+    "name": "MAL Condor 10,5 KG 1200 trs Noir",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "CON-FM121B",
+    "price": 1470,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CON-FM121B",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CON-FM121B",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1470.00 DA"
+    }
+  },
+  {
+    "id": 22,
+    "name": "MAL CONDOR Luna 10.5 Kg Inverter/1400 Trs Titanium",
+    "brand": "Condor",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WAF-XLB441L1T",
+    "price": 1450,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Condor - Réf: WAF-XLB441L1T",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "WAF-XLB441L1T",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1450.00 DA"
+    }
+  },
+  {
+    "id": 23,
+    "name": "LV Condor 16 couverts inverter Aff Inox",
+    "brand": "Condor",
+    "category": "LAVE VAISSELLE",
+    "categoryLabel": "Lave-Vaisselle",
+    "reference": "CLV-LUX16X",
+    "price": 1470,
+    "img": "img/lave-vaisselle.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CLV-LUX16X",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CLV-LUX16X",
+      "Catégorie": "Lave-Vaisselle",
+      "Prix HT": "1470.00 DA"
+    }
+  },
+  {
+    "id": 24,
+    "name": "LV Condor 16 couverts inverter Aff Noir",
+    "brand": "Condor",
+    "category": "LAVE VAISSELLE",
+    "categoryLabel": "Lave-Vaisselle",
+    "reference": "CLV-LUX16XB",
+    "price": 1525,
+    "img": "img/lave-vaisselle.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CLV-LUX16XB",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CLV-LUX16XB",
+      "Catégorie": "Lave-Vaisselle",
+      "Prix HT": "1525.00 DA"
+    }
+  },
+  {
+    "id": 25,
+    "name": "MINI BAR CONDOR 45L",
+    "brand": "Condor",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "CRF-T5GM8",
+    "price": 375,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CRF-T5GM8",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CRF-T5GM8",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "375.00 DA"
+    }
+  },
+  {
+    "id": 26,
+    "name": "REF CONDOR Rouge AVEC DISTRIBUTEUR D'EAU / R601a",
+    "brand": "Condor",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "CRF-T24GD14R",
+    "price": 710,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CRF-T24GD14R",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CRF-T24GD14R",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "710.00 DA"
+    }
+  },
+  {
+    "id": 27,
+    "name": "REF Condor DF 345L Blanc avec serrure",
+    "brand": "Condor",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "CRD45V4W-S",
+    "price": 1095,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CRD45V4W-S",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CRD45V4W-S",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1095.00 DA"
+    }
+  },
+  {
+    "id": 28,
+    "name": "REF Condor DF 345LGRIS avec serrure",
+    "brand": "Condor",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "CRD45V4G-S",
+    "price": 1180,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CRD45V4G-S",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CRD45V4G-S",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1180.00 DA"
+    }
+  },
+  {
+    "id": 29,
+    "name": "REF Condor DF 345LINOX avec serrure",
+    "brand": "Condor",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "CRD45V4X-S",
+    "price": 1200,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CRD45V4X-S",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CRD45V4X-S",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1200.00 DA"
+    }
+  },
+  {
+    "id": 30,
+    "name": "REFRIGERATEUR 2P NO-FROST 415L Blanc",
+    "brand": "Condor",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "CRDN560-W",
+    "price": 1580,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CRDN560-W",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CRDN560-W",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1580.00 DA"
+    }
+  },
+  {
+    "id": 31,
+    "name": "REFRIGERATEUR 2P NO-FROST 470L Blanc",
+    "brand": "Condor",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "CRDN630W",
+    "price": 1710,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CRDN630W",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CRDN630W",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1710.00 DA"
+    }
+  },
+  {
+    "id": 32,
+    "name": "SBS NF Condor 640 L Aff/ Dark Inox",
+    "brand": "Condor",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "CRS81NDX",
+    "price": 2740,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CRS81NDX",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CRS81NDX",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "2740.00 DA"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Clim Condor 12KBTU SUPER TROPICAL ALPHA",
+    "brand": "Condor",
+    "category": "CLIM",
+    "categoryLabel": "Climatiseur",
+    "reference": "CS12-AL84T3",
+    "price": 1540,
+    "img": "img/clim.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CS12-AL84T3",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CS12-AL84T3",
+      "Catégorie": "Climatiseur",
+      "Prix HT": "1540.00 DA"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Table de cuiss condor 4Feux Fonte INOX",
+    "brand": "Condor",
+    "category": "ENCASTRABLE",
+    "categoryLabel": "Encastrable",
+    "reference": "CTE64WAS1X",
+    "price": 304,
+    "img": "img/encastrable.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CTE64WAS1X",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CTE64WAS1X",
+      "Catégorie": "Encastrable",
+      "Prix HT": "304.00 DA"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Table de cuiss condor encast 5Feux-WOK Fonte /INOX",
+    "brand": "Condor",
+    "category": "ENCASTRABLE",
+    "categoryLabel": "Encastrable",
+    "reference": "CTE75W-FL2X",
+    "price": 552,
+    "img": "img/encastrable.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CTE75W-FL2X",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CTE75W-FL2X",
+      "Catégorie": "Encastrable",
+      "Prix HT": "552.00 DA"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Hotte condor casquette 60cm/320m3/h/inox",
+    "brand": "Condor",
+    "category": "ENCASTRABLE",
+    "categoryLabel": "Encastrable",
+    "reference": "CH-Q6300X",
+    "price": 185,
+    "img": "img/encastrable.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CH-Q6300X",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CH-Q6300X",
+      "Catégorie": "Encastrable",
+      "Prix HT": "185.00 DA"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Hotte condor casquette 60cm/320 m3/h/noire",
+    "brand": "Condor",
+    "category": "ENCASTRABLE",
+    "categoryLabel": "Encastrable",
+    "reference": "CH-Q6300N",
+    "price": 185,
+    "img": "img/encastrable.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CH-Q6300N",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CH-Q6300N",
+      "Catégorie": "Encastrable",
+      "Prix HT": "185.00 DA"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Hotte condor murale décorative 60cm Miroir/Noir",
+    "brand": "Condor",
+    "category": "ENCASTRABLE",
+    "categoryLabel": "Encastrable",
+    "reference": "CH-A640XGB",
+    "price": 365,
+    "img": "img/encastrable.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CH-A640XGB",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CH-A640XGB",
+      "Catégorie": "Encastrable",
+      "Prix HT": "365.00 DA"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Hotte condor cheminée 60cm/450m3/h INOX",
+    "brand": "Condor",
+    "category": "ENCASTRABLE",
+    "categoryLabel": "Encastrable",
+    "reference": "CH-L640X",
+    "price": 415,
+    "img": "img/encastrable.png",
+    "isNew": false,
+    "desc": "Condor - Réf: CH-L640X",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "CH-L640X",
+      "Catégorie": "Encastrable",
+      "Prix HT": "415.00 DA"
+    }
+  },
+  {
+    "id": 40,
+    "name": "ROBOT DE CUISINE CONDOR MUIti F MASTER MIX 750W",
+    "brand": "Condor",
+    "category": "PEM",
+    "categoryLabel": "Petit Électroménager",
+    "reference": "RC-MM1SN",
+    "price": 230,
+    "img": "img/pem.png",
+    "isNew": false,
+    "desc": "Condor - Réf: RC-MM1SN",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "RC-MM1SN",
+      "Catégorie": "Petit Électroménager",
+      "Prix HT": "230.00 DA"
+    }
+  },
+  {
+    "id": 41,
+    "name": "ROBOT DE CUISINE CONDOR MULTI FONCTION Versa Ch",
+    "brand": "Condor",
+    "category": "PEM",
+    "categoryLabel": "Petit Électroménager",
+    "reference": "RC-MV1SN",
+    "price": 345,
+    "img": "img/pem.png",
+    "isNew": false,
+    "desc": "Condor - Réf: RC-MV1SN",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "RC-MV1SN",
+      "Catégorie": "Petit Électroménager",
+      "Prix HT": "345.00 DA"
+    }
+  },
+  {
+    "id": 42,
+    "name": "ROBOT DE CUISINE CONDOR Mono F MASTER MIX 750W",
+    "brand": "Condor",
+    "category": "PEM",
+    "categoryLabel": "Petit Électroménager",
+    "reference": "RC-MU1SN",
+    "price": 195,
+    "img": "img/pem.png",
+    "isNew": false,
+    "desc": "Condor - Réf: RC-MU1SN",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "RC-MU1SN",
+      "Catégorie": "Petit Électroménager",
+      "Prix HT": "195.00 DA"
+    }
+  },
+  {
+    "id": 43,
+    "name": "BATTEUR MAIN CONDOR MASTER MIX 400W/INOX-NOIR",
+    "brand": "Condor",
+    "category": "PEM",
+    "categoryLabel": "Petit Électroménager",
+    "reference": "BT-MH2XN",
+    "price": 62,
+    "img": "img/pem.png",
+    "isNew": false,
+    "desc": "Condor - Réf: BT-MH2XN",
+    "specs": {
+      "Marque": "Condor",
+      "Référence": "BT-MH2XN",
+      "Catégorie": "Petit Électroménager",
+      "Prix HT": "62.00 DA"
+    }
+  },
+  {
+    "id": 44,
+    "name": "Ref NF Combiné Hisense 320 Litres Silver AFF/FONT",
+    "brand": "Hisense",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "RB1N300NMC/(RD39)",
+    "price": 1815,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: RB1N300NMC/(RD39)",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "RB1N300NMC/(RD39)",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1815.00 DA"
+    }
+  },
+  {
+    "id": 45,
+    "name": "Ref NF Combiné Hisense 320 Litres NOIR AFF/FONT",
+    "brand": "Hisense",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "RB1N300NMF1",
+    "price": 1840,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: RB1N300NMF1",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "RB1N300NMF1",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1840.00 DA"
+    }
+  },
+  {
+    "id": 46,
+    "name": "Ref NF Hisense 470 L premium inox Aff/Fontaine",
+    "brand": "Hisense",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "RT-60W",
+    "price": 2020,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: RT-60W",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "RT-60W",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "2020.00 DA"
+    }
+  },
+  {
+    "id": 47,
+    "name": "Ref NF SBS INOX SILVER Hisense 518 L",
+    "brand": "Hisense",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "RS3P518NMC/(RC67)",
+    "price": 3050,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: RS3P518NMC/(RC67)",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "RS3P518NMC/(RC67)",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "3050.00 DA"
+    }
+  },
+  {
+    "id": 48,
+    "name": "Réf SBS Hisense 640 L Font/Aff Inox Silver",
+    "brand": "Hisense",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "RS5P668NMC/ RC 87)",
+    "price": 3680,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: RS5P668NMC/ RC 87)",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "RS5P668NMC/ RC 87)",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "3680.00 DA"
+    }
+  },
+  {
+    "id": 49,
+    "name": "Congélateur horizontal hisense convertible blanc 238L",
+    "brand": "Hisense",
+    "category": "CONG",
+    "categoryLabel": "Congélateur",
+    "reference": "FC-33DT4SAW",
+    "price": 970,
+    "img": "img/congelateur.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: FC-33DT4SAW",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "FC-33DT4SAW",
+      "Catégorie": "Congélateur",
+      "Prix HT": "970.00 DA"
+    }
+  },
+  {
+    "id": 50,
+    "name": "Congélateur horizontal hisense convertible blanc 286 L",
+    "brand": "Hisense",
+    "category": "CONG",
+    "categoryLabel": "Congélateur",
+    "reference": "FC-40DT4SAW1",
+    "price": 1020,
+    "img": "img/congelateur.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: FC-40DT4SAW1",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "FC-40DT4SAW1",
+      "Catégorie": "Congélateur",
+      "Prix HT": "1020.00 DA"
+    }
+  },
+  {
+    "id": 51,
+    "name": "Congélateur horizontal HISENSE 297 Litres Blanc",
+    "brand": "Hisense",
+    "category": "CONG",
+    "categoryLabel": "Congélateur",
+    "reference": "FC-39DD",
+    "price": 1170,
+    "img": "img/congelateur.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: FC-39DD",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "FC-39DD",
+      "Catégorie": "Congélateur",
+      "Prix HT": "1170.00 DA"
+    }
+  },
+  {
+    "id": 52,
+    "name": "MAL Top Hisense 14 kg/Titanium Silver",
+    "brand": "Hisense",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WT3K1423UT",
+    "price": 1550,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: WT3K1423UT",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "WT3K1423UT",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1550.00 DA"
+    }
+  },
+  {
+    "id": 53,
+    "name": "MAL Top Hisense 18 kg/dark silver",
+    "brand": "Hisense",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WT311823UB",
+    "price": 1660,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: WT311823UB",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "WT311823UB",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1660.00 DA"
+    }
+  },
+  {
+    "id": 54,
+    "name": "Mal Frontale Hisense 8Kg/1400 Trs Inverter STEAM Titanium Silver",
+    "brand": "Hisense",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WFQP8014EVMT",
+    "price": 1200,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: WFQP8014EVMT",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "WFQP8014EVMT",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1200.00 DA"
+    }
+  },
+  {
+    "id": 55,
+    "name": "MAL HISENSE 10.5 KG SMART INVERTER BLANC",
+    "brand": "Hisense",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WF3S1043BW",
+    "price": 1440,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: WF3S1043BW",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "WF3S1043BW",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1440.00 DA"
+    }
+  },
+  {
+    "id": 56,
+    "name": "MAL Hisense 12 Kg Smart Inverter Vapeur Titanium",
+    "brand": "Hisense",
+    "category": "MAL",
+    "categoryLabel": "Machine à Laver",
+    "reference": "WF3S1243BT",
+    "price": 1620,
+    "img": "img/mal.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: WF3S1243BT",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "WF3S1243BT",
+      "Catégorie": "Machine à Laver",
+      "Prix HT": "1620.00 DA"
+    }
+  },
+  {
+    "id": 57,
+    "name": "TV HISENSE 43\" SMART UHD ANDROID",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "43A4200G",
+    "price": 828,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: 43A4200G",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "43A4200G",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "828.00 DA"
+    }
+  },
+  {
+    "id": 58,
+    "name": "TV HISENSE 50\" SMART UHD 4K GOOGLE TV",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "50A6GN",
+    "price": 1190,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: 50A6GN",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "50A6GN",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "1190.00 DA"
+    }
+  },
+  {
+    "id": 59,
+    "name": "TV Hisense 55\" 4K UHD A6500N Series GOOGLE TV",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "S5A6500N",
+    "price": 1340,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: S5A6500N",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "S5A6500N",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "1340.00 DA"
+    }
+  },
+  {
+    "id": 60,
+    "name": "TV Hisense 65\" 4K UHD A6500N Series GOOGLE TV",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "65A6500N",
+    "price": 2215,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: 65A6500N",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "65A6500N",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "2215.00 DA"
+    }
+  },
+  {
+    "id": 61,
+    "name": "TV Hisense 75\" 4K UHD A6500N Series GOOGLE TV",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "75A6500N",
+    "price": 3600,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: 75A6500N",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "75A6500N",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "3600.00 DA"
+    }
+  },
+  {
+    "id": 62,
+    "name": "TV HISENSE 85\" SMART UHD 4K",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "85A6N +43A4200G",
+    "price": 5920,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: 85A6N +43A4200G",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "85A6N +43A4200G",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "5920.00 DA"
+    }
+  },
+  {
+    "id": 63,
+    "name": "TV HISENSE 85\" QLED UHD 4K Smart TV",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "85Q6N +43A4200G",
+    "price": 6120,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: 85Q6N +43A4200G",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "85Q6N +43A4200G",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "6120.00 DA"
+    }
+  },
+  {
+    "id": 64,
+    "name": "TV HISENSE QLED UHD 100\" /SERIE Q7",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "100Q7N+50A6GN",
+    "price": 9240,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: 100Q7N+50A6GN",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "100Q7N+50A6GN",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "9240.00 DA"
+    }
+  },
+  {
+    "id": 65,
+    "name": "TV HISENSE 100\" 4K UHD SMART TV X-Fusion Laser Light",
+    "brand": "Hisense",
+    "category": "TV",
+    "categoryLabel": "Téléviseur",
+    "reference": "100L5GE",
+    "price": 13200,
+    "img": "img/tv.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: 100L5GE",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "100L5GE",
+      "Catégorie": "Téléviseur",
+      "Prix HT": "13200.00 DA"
+    }
+  },
+  {
+    "id": 66,
+    "name": "CLIMATISEUR HISENSE 12000 CF INVERTER",
+    "brand": "Hisense",
+    "category": "CLIM",
+    "categoryLabel": "Climatiseur",
+    "reference": "AS-12UW4S",
+    "price": 1610,
+    "img": "img/clim.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: AS-12UW4S",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "AS-12UW4S",
+      "Catégorie": "Climatiseur",
+      "Prix HT": "1610.00 DA"
+    }
+  },
+  {
+    "id": 67,
+    "name": "CLIMATISEUR HISENSE 24000 CFON/OFF",
+    "brand": "Hisense",
+    "category": "CLIM",
+    "categoryLabel": "Climatiseur",
+    "reference": "AS-24HW4S",
+    "price": 2440,
+    "img": "img/clim.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: AS-24HW4S",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "AS-24HW4S",
+      "Catégorie": "Climatiseur",
+      "Prix HT": "2440.00 DA"
+    }
+  },
+  {
+    "id": 68,
+    "name": "CLIMATISEUR HISENSE 24000 CFinverter",
+    "brand": "Hisense",
+    "category": "CLIM",
+    "categoryLabel": "Climatiseur",
+    "reference": "AS-24UW4S",
+    "price": 2640,
+    "img": "img/clim.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: AS-24UW4S",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "AS-24UW4S",
+      "Catégorie": "Climatiseur",
+      "Prix HT": "2640.00 DA"
+    }
+  },
+  {
+    "id": 69,
+    "name": "Four Mico-ondes Hisense 20 L/700W silver",
+    "brand": "Hisense",
+    "category": "MICRO ONDE",
+    "categoryLabel": "Micro-ondes",
+    "reference": "H20MOMP1HG",
+    "price": 294,
+    "img": "img/micro-onde.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: H20MOMP1HG",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "H20MOMP1HG",
+      "Catégorie": "Micro-ondes",
+      "Prix HT": "294.00 DA"
+    }
+  },
+  {
+    "id": 70,
+    "name": "Mico-ondes Hisense 20 L/700W blanc contrôle digital",
+    "brand": "Hisense",
+    "category": "MICRO ONDE",
+    "categoryLabel": "Micro-ondes",
+    "reference": "H20MOWS11",
+    "price": 305,
+    "img": "img/micro-onde.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: H20MOWS11",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "H20MOWS11",
+      "Catégorie": "Micro-ondes",
+      "Prix HT": "305.00 DA"
+    }
+  },
+  {
+    "id": 71,
+    "name": "Mico-ondes Hisense 25 L/900W blanc contrôle digital",
+    "brand": "Hisense",
+    "category": "MICRO ONDE",
+    "categoryLabel": "Micro-ondes",
+    "reference": "H25MOWS7H",
+    "price": 405,
+    "img": "img/micro-onde.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: H25MOWS7H",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "H25MOWS7H",
+      "Catégorie": "Micro-ondes",
+      "Prix HT": "405.00 DA"
+    }
+  },
+  {
+    "id": 72,
+    "name": "Four/Mico-ondes Hisense 25 L/900W noir contrôle digital",
+    "brand": "Hisense",
+    "category": "MICRO ONDE",
+    "categoryLabel": "Micro-ondes",
+    "reference": "H25MOBS6G",
+    "price": 385,
+    "img": "img/micro-onde.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: H25MOBS6G",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "H25MOBS6G",
+      "Catégorie": "Micro-ondes",
+      "Prix HT": "385.00 DA"
+    }
+  },
+  {
+    "id": 73,
+    "name": "Aspirateur Hisense sans sac 2300W ROUGE",
+    "brand": "Hisense",
+    "category": "PEM",
+    "categoryLabel": "Petit Électroménager",
+    "reference": "VC2302GALRCY",
+    "price": 330,
+    "img": "img/pem.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: VC2302GALRCY",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "VC2302GALRCY",
+      "Catégorie": "Petit Électroménager",
+      "Prix HT": "330.00 DA"
+    }
+  },
+  {
+    "id": 74,
+    "name": "Air Fryer Hisense 6,7 L/1350W/Digital",
+    "brand": "Hisense",
+    "category": "PEM",
+    "categoryLabel": "Petit Électroménager",
+    "reference": "H06AFBS2S3",
+    "price": 250,
+    "img": "img/pem.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: H06AFBS2S3",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "H06AFBS2S3",
+      "Catégorie": "Petit Électroménager",
+      "Prix HT": "250.00 DA"
+    }
+  },
+  {
+    "id": 75,
+    "name": "Blender Hisense 1,5 L BL/Inox 500 W",
+    "brand": "Hisense",
+    "category": "PEM",
+    "categoryLabel": "Petit Électroménager",
+    "reference": "H15TBWESZA",
+    "price": 107,
+    "img": "img/pem.png",
+    "isNew": false,
+    "desc": "Hisense - Réf: H15TBWESZA",
+    "specs": {
+      "Marque": "Hisense",
+      "Référence": "H15TBWESZA",
+      "Catégorie": "Petit Électroménager",
+      "Prix HT": "107.00 DA"
+    }
+  },
+  {
+    "id": 76,
+    "name": "REF TCL Double portes 333L No Frost Inox",
+    "brand": "TCL",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "P333 TMS",
+    "price": 1750,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Double portes, Capacité nette: 333L, Réfrigérateur: 256L, Congélateur: 77L, Classe A+, Total No Frost, LED, Inox, 600x1700x665mm",
+    "specs": {
+      "Marque": "TCL",
+      "Référence": "P333 TMS",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1750.00 DA"
+    }
+  },
+  {
+    "id": 77,
+    "name": "REF TCL Double portes 420L No Frost Inverter Inox",
+    "brand": "TCL",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "P425 TMN",
+    "price": 2225,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Double portes, Capacité nette: 420L, Réfrigérateur: 319L, Congélateur: 101L, Total No Frost, Inverter, LED, Twist Ice Maker, 706x1720x686mm, Garantie compresseur 10 ans",
+    "specs": {
+      "Marque": "TCL",
+      "Référence": "P425 TMN",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "2225.00 DA"
+    }
+  },
+  {
+    "id": 78,
+    "name": "REF TCL Double portes 465L No Frost Inverter Inox",
+    "brand": "TCL",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "P465 TMN",
+    "price": 2300,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Double portes, Capacité nette: 465L, Réfrigérateur: 364L, Congélateur: 101L, Total No Frost, Inverter, Affichage LED externe, Inox, Twist Ice Maker, 706x1850x686mm, Garantie compresseur 10 ans",
+    "specs": {
+      "Marque": "TCL",
+      "Référence": "P465 TMN",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "2300.00 DA"
+    }
+  },
+  {
+    "id": 79,
+    "name": "REF TCL Double portes 540L No Frost Inverter Distributeur Inox",
+    "brand": "TCL",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "P545 TMN",
+    "price": 2680,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Double portes, Capacité nette: 540L, Réfrigérateur: 398L, Congélateur: 142L, Distributeur d'eau, Total No Frost, Inverter, Affichage LED externe, Twist Ice Maker, Inox, 836x1850x688mm, Garantie compresseur 10 ans",
+    "specs": {
+      "Marque": "TCL",
+      "Référence": "P545 TMN",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "2680.00 DA"
+    }
+  },
+  {
+    "id": 80,
+    "name": "REF TCL Combiné 318L No Frost Inox",
+    "brand": "TCL",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "P315 BFN",
+    "price": 1950,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Combiné, Capacité nette: 318L, Réfrigérateur: 219L, Congélateur: 99L, Classe A+, Total No Frost, Affichage LED externe, Twist Ice Maker, Inox, 595x1850x630mm",
+    "specs": {
+      "Marque": "TCL",
+      "Référence": "P315 BFN",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1950.00 DA"
+    }
+  },
+  {
+    "id": 81,
+    "name": "REF TCL Quatre Portes 512L No Frost Inverter Inox",
+    "brand": "TCL",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "C512 CDN",
+    "price": 4900,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Quatre Portes, Capacité nette: 512L, Réfrigérateur: 348L, Congélateur: 148L, Zone flexible: 16L, Total No Frost, Inverter, Multi-air flow, Affichage LED, Sky Power LED, Twist Ice Maker, Inox, 909x690x1900mm, Garantie compresseur 10 ans",
+    "specs": {
+      "Marque": "TCL",
+      "Référence": "C512 CDN",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "4900.00 DA"
+    }
+  },
+  {
+    "id": 82,
+    "name": "REF TCL Double portes 286L No Frost Silver",
+    "brand": "TCL",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "P370",
+    "price": 1720,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Double portes, Capacité nette: 286L, Réfrigérateur: 225L, Congélateur: 61L, Classe A+, Total No Frost, Contrôle électronique, Affichage LED, Silver, 545x1770x620mm",
+    "specs": {
+      "Marque": "TCL",
+      "Référence": "P370",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "1720.00 DA"
+    }
+  },
+  {
+    "id": 83,
+    "name": "REF TCL Combiné 417L No Frost Inverter Inox",
+    "brand": "TCL",
+    "category": "REF",
+    "categoryLabel": "Réfrigérateur",
+    "reference": "P417 BFN",
+    "price": 2575,
+    "img": "img/ref.png",
+    "isNew": false,
+    "desc": "Combiné, Capacité nette: 417L, Réfrigérateur: 276L, Congélateur: 141L, Classe A+, Total No Frost, Inverter, Affichage LED, Grand bac à fruits et légumes, Twist Ice Maker, Inox",
+    "specs": {
+      "Marque": "TCL",
+      "Référence": "P417 BFN",
+      "Catégorie": "Réfrigérateur",
+      "Prix HT": "2575.00 DA"
+    }
+  }
+]
