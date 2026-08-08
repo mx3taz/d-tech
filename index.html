@@ -1078,6 +1078,50 @@
             font-size: 1.1rem;
         }
 
+        .qty-controls {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1rem;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qty-btn:hover {
+            background: rgba(0, 168, 255, 0.15);
+            color: var(--secondary);
+        }
+
+        .qty-btn.qty-minus:hover {
+            background: rgba(239, 68, 68, 0.12);
+            color: #ef4444;
+        }
+
+        .qty-value {
+            min-width: 30px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            font-family: 'Outfit', sans-serif;
+            color: #fff;
+            user-select: none;
+        }
+
         .cart-total {
             display: flex;
             justify-content: space-between;
@@ -1466,6 +1510,83 @@
                                 style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
                             <h3 style="font-size:1.2rem; text-align:center;">Déshumidificateurs</h3>
                         </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('MAL'), 100)">
+                            <i class="fa-solid fa-jug-detergent"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Machines à Laver</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('LAVE_VAISSELLE'), 100)">
+                            <i class="fa-solid fa-sink"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Lave-Vaisselle</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('PLAQUE_CUISSON'), 100)">
+                            <i class="fa-solid fa-border-all"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Plaques de Cuisson</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('HOTTE'), 100)">
+                            <i class="fa-solid fa-kitchen-set"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Hottes</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('ROBOT_CUISINE'), 100)">
+                            <i class="fa-solid fa-gears"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Robots de Cuisine</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('BATTEUR'), 100)">
+                            <i class="fa-solid fa-utensils"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Batteurs à Main</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('CONGELATEUR'), 100)">
+                            <i class="fa-solid fa-temperature-low"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Congélateurs</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('MICRO_ONDE'), 100)">
+                            <i class="fa-solid fa-clock-rotate-left"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Micro-ondes</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('ASPIRATEUR'), 100)">
+                            <i class="fa-solid fa-broom"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Aspirateurs</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('AIR_FRYER'), 100)">
+                            <i class="fa-solid fa-drumstick-bite"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Friteuses Sans Huile</h3>
+                        </a>
+                        <a href="#products" class="bento-item"
+                            style="min-height:120px; border-radius:18px; padding:1.5rem; justify-content:center; align-items:center; background: rgba(255,255,255,0.03); flex-direction:column; display:flex;"
+                            onclick="setTimeout(()=>homeFilterByCategory('BLENDER'), 100)">
+                            <i class="fa-solid fa-blender"
+                                style="color:var(--secondary);margin-bottom:0.8rem;font-size:2.2rem;"></i>
+                            <h3 style="font-size:1.2rem; text-align:center;">Blenders</h3>
+                        </a>
                     </div>
                 </section>
 
@@ -1521,6 +1642,18 @@
                             <img src="img/korkmaz.svg" alt="Korkmaz" class="brand-logo-img"
                                 style="height:60px; max-width:90%; object-fit:contain;"
                                 onerror="this.outerHTML='<span style=\'font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:1px;font-family:Outfit\'>Korkmaz</span>'">
+                        </a>
+                        <a href="#products" class="brand-item" style="padding: 2rem;"
+                            onclick="setTimeout(()=>homeFilterByBrand('Condor'), 100)">
+                            <img src="img/condor.svg" alt="Condor" class="brand-logo-img"
+                                style="height:60px; max-width:90%; object-fit:contain;"
+                                onerror="this.outerHTML='<span style=\'font-size:1.8rem;font-weight:800;color:#fff;letter-spacing:1px;font-family:Outfit\'>Condor</span>'">
+                        </a>
+                        <a href="#products" class="brand-item" style="padding: 2rem;"
+                            onclick="setTimeout(()=>homeFilterByBrand('Hisense'), 100)">
+                            <img src="img/hisense.svg" alt="Hisense" class="brand-logo-img"
+                                style="height:60px; max-width:90%; object-fit:contain;"
+                                onerror="this.outerHTML='<span style=\'font-size:1.8rem;font-weight:800;color:#00a8ff;letter-spacing:1px;font-family:Outfit\'>Hisense</span>'">
                         </a>
                     </div>
                 </section>
@@ -1640,7 +1773,7 @@
             <div class="container">
                 <img src="logos.jpeg" alt="D-Tech Logo"
                     style="height: 35px; filter: grayscale(1) opacity(0.3); margin-bottom: 1.5rem;">
-                <p>&copy; 2026 D-Tech Electronics. Qualité d'élite. Paiement en magasin uniquement.</p>
+                <p>&copy; 2026 D-Tech Electronics. Qualité d'élite.</p>
             </div>
         </footer>
 
@@ -1663,8 +1796,8 @@
         const products = [
             { id: 1, name: 'Fontaine Fraîche TCL TY-LYR101', brand: 'TCL', category: 'FONTAINE', categoryLabel: 'Fontaine Fraîche', reference: 'TY-LYR101', price: 425, img: 'img/products/TY-LYR101.jpg', isNew: false, desc: 'Fontaine Fraîche TCL - Réf: TY-LYR101', specs: { 'Marque': 'TCL', 'Référence': 'TY-LYR101', 'Catégorie': 'Fontaine Fraîche', 'Puissance': '520 W', 'Eau Chaude': '>90° 4L/h', 'Eau Froide': '<10° 2L/h', 'Protection': 'Anti-Choc Electrique', 'Type': "Distributeur d'Eau Froide à Compresseur au Sol", 'Porte': 'Avec Porte Fixe', 'Conception': 'Conception à Deux Robinets', 'Couleur': 'Noir', 'Prix HT': '425.000 TND' } },
             { id: 2, name: 'Fontaine Fraîche TCL TY-LYR39W', brand: 'TCL', category: 'FONTAINE', categoryLabel: 'Fontaine Fraîche', reference: 'TY-LYR39W', price: 490, img: '', isNew: false, desc: 'Fontaine Fraîche TCL - Réf: TY-LYR39W', specs: { 'Marque': 'TCL', 'Référence': 'TY-LYR39W', 'Catégorie': 'Fontaine Fraîche', 'Puissance': '520 W', 'Eau Chaude': '>90° 4L/h', 'Eau Froide': '<10° 2L/h', 'Protection': 'Anti-Choc Electrique', 'Type': "Distributeur d'Eau Froide à Compresseur au Sol", 'Armoire': 'Avec Armoire', 'Conception': 'Conception de Porte-Gobelet', 'Couleur': 'Blanc', 'Prix HT': '490.000 TND' } },
-            { id: 3, name: 'Fontaine Fraîche TCL TY-LYR39B', brand: 'TCL', category: 'FONTAINE', categoryLabel: 'Fontaine Fraîche', reference: 'TY-LYR39B', price: 550, img: '', isNew: false, desc: 'Fontaine Fraîche TCL - Réf: TY-LYR39B', specs: { 'Marque': 'TCL', 'Référence': 'TY-LYR39B', 'Catégorie': 'Fontaine Fraîche', 'Puissance': '520 W', 'Eau Chaude': '>90° 4L/h', 'Eau Froide': '<10° 1L/h', 'Protection': 'Anti-Choc Electrique', 'Type': "Distributeur d'Eau Froide à Compresseur au Sol", 'Réfrigérateur': 'Avec Réfrigérateur', 'Conception': 'Conception de Porte-Gobelet', 'Couleur': 'Blanc', 'Prix HT': '550.000 TND' } },
-            { id: 4, name: 'Fontaine Fraîche TCL TY-LWYR71T', brand: 'TCL', category: 'FONTAINE', categoryLabel: 'Fontaine Fraîche', reference: 'TY-LWYR71T', price: 690, img: 'img/products/Y-LWYR71TTY-LWYR71T.jpg', isNew: false, desc: 'Fontaine Fraîche TCL - Réf: TY-LWYR71T', specs: { 'Marque': 'TCL', 'Référence': 'TY-LWYR71T', 'Catégorie': 'Fontaine Fraîche', 'Puissance': '520 W', 'Eau Chaude': '>90° 4L/h', 'Eau Froide': '<10° 2L/h', 'Protection': 'Anti-Choc Electrique', 'Type': "Distributeur d'Eau à Collage de Compresseur sur Pied Avec Conception de Chargement par le Bas", 'Bouton': 'Bouton à Trois Pressions', 'Couleur': 'Noir&Gris', 'Prix HT': '690.000 TND' } },
+            { id: 3, name: 'Fontaine Fraîche TCL TY-LYR39B', brand: 'TCL', category: 'FONTAINE', categoryLabel: 'Fontaine Fraîche', reference: 'TY-LYR39B', price: 550, img: 'img/products/TY-LYR39B.webp', isNew: false, desc: 'Fontaine Fraîche TCL - Réf: TY-LYR39B', specs: { 'Marque': 'TCL', 'Référence': 'TY-LYR39B', 'Catégorie': 'Fontaine Fraîche', 'Puissance': '520 W', 'Eau Chaude': '>90° 4L/h', 'Eau Froide': '<10° 1L/h', 'Protection': 'Anti-Choc Electrique', 'Type': "Distributeur d'Eau Froide à Compresseur au Sol", 'Réfrigérateur': 'Avec Réfrigérateur', 'Conception': 'Conception de Porte-Gobelet', 'Couleur': 'Blanc', 'Prix HT': '550.000 TND' } },
+            { id: 4, name: 'Fontaine Fraîche TCL TY-LWYR71T', brand: 'TCL', category: 'FONTAINE', categoryLabel: 'Fontaine Fraîche', reference: 'TY-LWYR71T', price: 690, img: 'img/products/TY-LWYR71T.webp', isNew: false, desc: 'Fontaine Fraîche TCL - Réf: TY-LWYR71T', specs: { 'Marque': 'TCL', 'Référence': 'TY-LWYR71T', 'Catégorie': 'Fontaine Fraîche', 'Puissance': '520 W', 'Eau Chaude': '>90° 4L/h', 'Eau Froide': '<10° 2L/h', 'Protection': 'Anti-Choc Electrique', 'Type': "Distributeur d'Eau à Collage de Compresseur sur Pied Avec Conception de Chargement par le Bas", 'Bouton': 'Bouton à Trois Pressions', 'Couleur': 'Noir&Gris', 'Prix HT': '690.000 TND' } },
             { id: 5, name: 'Climeur Mobile SABA FA-M40', brand: 'SABA', category: 'CLIMEUR_MOBILE', categoryLabel: 'Climeur Mobile', reference: 'FA-M40', price: 285, img: 'img/products/FA-M40.jpg', isNew: true, desc: 'Climeur Mobile SABA - Réf: FA-M40', specs: { 'Marque': 'SABA', 'Référence': 'FA-M40', 'Catégorie': 'Climeur Mobile', 'Capacité du réservoir': '40L', 'Commande': 'Mécanique', 'Puissance': '120W', 'Vitesses': '3', 'Roues': '4', 'Vitesse du vent': '6 m/s', 'Débit d\'air': '3000-4000 m³/h', 'Filtre': 'À poussière amovible', 'Indicateur': 'Remplissage d\'eau', 'Distribution': 'Air froid automatique', 'Emplacement': 'Spécial en haut pour mettre de la glace', 'Couleur': 'Blanc', 'Dimensions': '370*430*1190(mm)', 'Prix HT': '285.000 TND' } },
             { id: 6, name: 'Climeur Mobile SABA FA-M90', brand: 'SABA', category: 'CLIMEUR_MOBILE', categoryLabel: 'Climeur Mobile', reference: 'FA-M90', price: 570, img: 'img/products/FA-M90.jpg', isNew: true, desc: 'Climeur Mobile SABA - Réf: FA-M90', specs: { 'Marque': 'SABA', 'Référence': 'FA-M90', 'Catégorie': 'Climeur Mobile', 'Capacité du réservoir': '90L', 'Commande': 'Mécanique', 'Puissance': '210W', 'Vitesses': '3', 'Roues': '4', 'Vitesse du vent': '7,5 m/s', 'Débit d\'air': '7000 m³/h', 'Refroidissement': 'Sur 3 côtés', 'Distribution': 'Air froid automatique', 'Indicateur': 'Remplissage d\'eau', 'Couleur': 'Gris foncé/Blanc', 'Dimensions': '840*555*1350(mm)', 'Prix HT': '570.000 TND' } },
             { id: 7, name: 'Mixeur Plongeant KENWOOD HBM40.002WH', brand: 'KENWOOD', category: 'MIXEUR_PLONGEANT', categoryLabel: 'Mixeur Plongeant', reference: 'HBM40.002WH', price: 210, img: 'img/products/HBM40.002WH.jpg', isNew: true, desc: 'Mixeur plongeant KENWOOD - Réf: HBM40.002WH', specs: { 'Marque': 'KENWOOD', 'Référence': 'HBM40.002WH', 'Catégorie': 'Mixeur Plongeant', 'Puissance': '850 W', 'Bol': '700 ml', 'Lames': 'Système Triblade XL ™ à 3 lames en acier inoxydable', 'Vitesse': 'Variateur de vitesse', 'Accessoires': 'Fouet en métal', 'Poignée': 'Suregrip™', 'Gobelet': 'Gobelet mesureur avec bec verseur', 'Entretien': 'Compatibles avec le lave-vaisselle', 'Couleur': 'Gris', 'Prix HT': '210.000 TND' } },
@@ -1715,7 +1848,85 @@
             { id: 52, name: 'Climatiseur SABA 18H/IW Chaud/Froid', brand: 'SABA', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'SABAW 18H/IW', price: 1890, img: 'img/products/SABAW-12H-IW.jpg', isNew: false, desc: 'Climatiseur SABA 18000 BTU Chaud/Froid - Réf: SABAW 18H/IW', specs: { 'Marque': 'SABA', 'Référence': 'SABAW 18H/IW', 'Catégorie': 'Climatiseur', 'Type': 'Chaud/Froid', 'Mode turbo': 'Oui', 'Afficheur LED': 'Oui', 'Mode Sleep': 'Oui', 'Silencieux': 'Oui', 'Dimensions unité intérieure (L*P*H)': '971*228*321', 'Capacité de refroidissement': '17993 BTU/h', 'Capacité de chauffage': '18500 BTU/h', 'Réfrigérant': 'R410A', 'Tension nominale': '220-240V 50HZ', 'Isolement': 'I', 'Compresseur': 'T1', 'Niveau sonore': '43.5 dB(A)', 'EER': '12 (A)', 'Prix HT': '1 890.000 TND' } },
             { id: 53, name: 'Climatiseur SABA 18C/IW Froid', brand: 'SABA', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'SABAW 18C/IW', price: 1790, img: 'img/products/SABAW-12H-IW.jpg', isNew: false, desc: 'Climatiseur SABA 18000 BTU Froid - Réf: SABAW 18C/IW', specs: { 'Marque': 'SABA', 'Référence': 'SABAW 18C/IW', 'Catégorie': 'Climatiseur', 'Type': 'Froid seul', 'Mode turbo': 'Oui', 'Afficheur LED': 'Oui', 'Mode Sleep': 'Oui', 'Silencieux': 'Oui', 'Dimensions unité intérieure (L*P*H)': '971*228*321', 'Capacité de refroidissement': '19080 BTU/h', 'Réfrigérant': 'R410A', 'Tension nominale': '220-240V 50HZ', 'Isolement': 'I', 'Compresseur': 'T1', 'Niveau sonore': '44 dB(A)', 'EER': '12.07 (A)', 'Prix HT': '1 790.000 TND' } },
             { id: 54, name: 'Service à Thé Korkmaz Luna A8687-1', brand: 'Korkmaz', category: 'SERVICE_THE', categoryLabel: 'Service à Thé', reference: 'A8687-1', price: 280, img: 'img/products/A8687-1.jpg', isNew: false, desc: 'Service à Thé Korkmaz Luna - Réf: A8687-1', specs: { 'Marque': 'Korkmaz', 'Référence': 'A8687-1', 'Catégorie': 'Service à Thé', 'Collection': 'Luna', 'Plat de service 20 cm': '6 pièces', 'Bol à confiture 10 cm': '4 pièces', 'Assiette Bateau 27 cm': '1 Pièce', 'Assiette Bateau 16 cm': '1 Pièce', 'Oliveraie': '1 Pièce', 'Verre à thé': '6 pièces', 'Assiette à thé': '6 pièces', 'Prix HT': '280.000 TND' } },
-            { id: 55, name: 'Service Petit-Déjeuner Korkmaz Flatta A8793', brand: 'Korkmaz', category: 'SERVICE_THE', categoryLabel: 'Service à Thé', reference: 'A8793', price: 195, img: 'img/products/A8793.jpg', isNew: false, desc: 'Service Petit-Déjeuner Korkmaz Collection Flatta - Réf: A8793', specs: { 'Marque': 'Korkmaz', 'Référence': 'A8793', 'Catégorie': 'Service à Thé', 'Collection': 'Flatta', 'Nombre de pièces total': '25 pièces', 'Assiette à dessert': '6 pièces', 'Tasse à thé': '6 pièces', 'Soucoupe à thé': '6 pièces', 'Grande assiette ovale': '1 pièce', 'Petite assiette ovale': '1 pièce', 'Bol à confiture': '4 pièces', 'Assiette d\'olives': '1 pièce', 'Prix HT': '195.000 TND' } }
+            { id: 55, name: 'Service Petit-Déjeuner Korkmaz Flatta A8793', brand: 'Korkmaz', category: 'SERVICE_THE', categoryLabel: 'Service à Thé', reference: 'A8793', price: 195, img: 'img/products/A8793.jpg', isNew: false, desc: 'Service Petit-Déjeuner Korkmaz Collection Flatta - Réf: A8793', specs: { 'Marque': 'Korkmaz', 'Référence': 'A8793', 'Catégorie': 'Service à Thé', 'Collection': 'Flatta', 'Nombre de pièces total': '25 pièces', 'Assiette à dessert': '6 pièces', 'Tasse à thé': '6 pièces', 'Soucoupe à thé': '6 pièces', 'Grande assiette ovale': '1 pièce', 'Petite assiette ovale': '1 pièce', 'Bol à confiture': '4 pièces', 'Assiette d\'olives': '1 pièce', 'Prix HT': '195.000 TND' } },
+
+            { id: 56, name: 'Machine à Laver Condor Semi-Auto 10.5 kg Tulipe WT10T1', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT10T1', price: 445, img: 'img/products/CONDOR/MAL/WT10T1.jpg', isNew: false, desc: 'Machine à Laver Condor Semi-Auto - Réf: WT10T1', specs: { 'Marque': 'Condor', 'Référence': 'WT10T1', 'Catégorie': 'Machine à Laver', 'Type': 'Semi-Automatique', 'Capacité': '10.5 kg', 'Couleur': 'Blanc/Tulipe', 'Prix HT': '445.000 TND' } },
+            { id: 57, name: 'Machine à Laver Condor Semi-Auto 10.5 kg Tulipe Bleu WT10T1BF', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT10T1BF', price: 445, img: 'img/products/CONDOR/MAL/WT10T1BF.webp', isNew: false, desc: 'Machine à Laver Condor Semi-Auto - Réf: WT10T1BF', specs: { 'Marque': 'Condor', 'Référence': 'WT10T1BF', 'Catégorie': 'Machine à Laver', 'Type': 'Semi-Automatique', 'Capacité': '10.5 kg', 'Couleur': 'Bleu', 'Prix HT': '445.000 TND' } },
+            { id: 58, name: 'Machine à Laver Condor Semi-Auto 13 kg Tulipe WT13T1', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT13T1', price: 510, img: 'img/products/CONDOR/MAL/WT13T1.jpg', isNew: false, desc: 'Machine à Laver Condor Semi-Auto - Réf: WT13T1', specs: { 'Marque': 'Condor', 'Référence': 'WT13T1', 'Catégorie': 'Machine à Laver', 'Type': 'Semi-Automatique', 'Capacité': '13 kg', 'Couleur': 'Blanc/Tulipe', 'Prix HT': '510.000 TND' } },
+            { id: 59, name: 'Machine à Laver Condor Semi-Auto 13 kg Tulipe Bleu WT13T1BF', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT13T1BF', price: 510, img: 'img/products/CONDOR/MAL/WT13T1BF.jpg', isNew: false, desc: 'Machine à Laver Condor Semi-Auto - Réf: WT13T1BF', specs: { 'Marque': 'Condor', 'Référence': 'WT13T1BF', 'Catégorie': 'Machine à Laver', 'Type': 'Semi-Automatique', 'Capacité': '13 kg', 'Couleur': 'Bleu', 'Prix HT': '510.000 TND' } },
+            { id: 60, name: 'Machine à Laver Condor Top 8kg Blanche WAT-KS3M34W', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WAT-KS3M34W', price: 675, img: 'img/products/CONDOR/MAL/WAT-KS3M34W.jpg', isNew: false, desc: 'Machine à Laver Condor Chargement par le dessus - Réf: WAT-KS3M34W', specs: { 'Marque': 'Condor', 'Référence': 'WAT-KS3M34W', 'Catégorie': 'Machine à Laver', 'Type': 'Top Load', 'Capacité': '8 kg', 'Couleur': 'Blanc', 'Prix HT': '675.000 TND' } },
+            { id: 61, name: 'Machine à Laver Condor Top 8kg Gris WAT-KS3M34D', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WAT-KS3M34D', price: 705, img: 'img/products/CONDOR/MAL/WAT-KS3M34D.jpg', isNew: false, desc: 'Machine à Laver Condor Chargement par le dessus - Réf: WAT-KS3M34D', specs: { 'Marque': 'Condor', 'Référence': 'WAT-KS3M34D', 'Catégorie': 'Machine à Laver', 'Type': 'Top Load', 'Capacité': '8 kg', 'Couleur': 'Gris', 'Prix HT': '705.000 TND' } },
+            { id: 62, name: 'Machine à Laver Condor Top 10.5 kg BL WL10-MS35W', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WL10-MS35W', price: 870, img: 'img/products/CONDOR/MAL/WL10-MS35W.jpg', isNew: false, desc: 'Machine à Laver Condor Chargement par le dessus - Réf: WL10-MS35W', specs: { 'Marque': 'Condor', 'Référence': 'WL10-MS35W', 'Catégorie': 'Machine à Laver', 'Type': 'Top Load', 'Capacité': '10.5 kg', 'Couleur': 'Blanc', 'Prix HT': '870.000 TND' } },
+            { id: 63, name: 'Machine à Laver Condor Top 10.5 kg Dark Silver WL10-MS35D', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WL10-MS35D', price: 915, img: 'img/products/CONDOR/MAL/WL10-MS35D.jpg', isNew: false, desc: 'Machine à Laver Condor Chargement par le dessus - Réf: WL10-MS35D', specs: { 'Marque': 'Condor', 'Référence': 'WL10-MS35D', 'Catégorie': 'Machine à Laver', 'Type': 'Top Load', 'Capacité': '10.5 kg', 'Couleur': 'Dark Silver', 'Prix HT': '915.000 TND' } },
+            { id: 64, name: 'Machine à Laver Condor Frontale 6kg 1200 Trs Blanc WF6-A12W', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WF6-A12W', price: 840, img: 'img/products/CONDOR/MAL/WF6-A12W.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: WF6-A12W', specs: { 'Marque': 'Condor', 'Référence': 'WF6-A12W', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '6 kg', 'Vitesse d\'essorage': '1200 Trs/min', 'Couleur': 'Blanc', 'Prix HT': '840.000 TND' } },
+            { id: 65, name: 'Machine à Laver Condor Frontale 6kg 1000 Trs Silver CON-F610LS', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F610LS', price: 895, img: 'img/products/CONDOR/MAL/CON-F610LS.webp', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F610LS', specs: { 'Marque': 'Condor', 'Référence': 'CON-F610LS', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '6 kg', 'Vitesse d\'essorage': '1000 Trs/min', 'Couleur': 'Silver', 'Prix HT': '895.000 TND' } },
+            { id: 66, name: 'Machine à Laver Condor Frontale 6kg 1000 Trs Noir CON-F610LB', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F610LB', price: 895, img: 'img/products/CONDOR/MAL/CON-F610LB.png', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F610LB', specs: { 'Marque': 'Condor', 'Référence': 'CON-F610LB', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '6 kg', 'Vitesse d\'essorage': '1000 Trs/min', 'Couleur': 'Noir', 'Prix HT': '895.000 TND' } },
+            { id: 67, name: 'Machine à Laver Condor Frontale 7kg 1000 Trs Silver CON-F710L', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F710L', price: 900, img: 'img/products/CONDOR/MAL/CON-F710L.png', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F710L', specs: { 'Marque': 'Condor', 'Référence': 'CON-F710L', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '7 kg', 'Vitesse d\'essorage': '1000 Trs/min', 'Couleur': 'Silver', 'Prix HT': '900.000 TND' } },
+            { id: 68, name: 'Machine à Laver Condor Frontale 7kg 1000 Trs Silver CON-F710LS', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F710LS', price: 955, img: 'img/products/CONDOR/MAL/CON-F710LS.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F710LS', specs: { 'Marque': 'Condor', 'Référence': 'CON-F710LS', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '7 kg', 'Vitesse d\'essorage': '1000 Trs/min', 'Couleur': 'Silver', 'Prix HT': '955.000 TND' } },
+            { id: 69, name: 'Machine à Laver Condor Frontale 7kg 1000 Trs Noir CON-F710LB', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F710LB', price: 955, img: 'img/products/CONDOR/MAL/CON-F710LB.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F710LB', specs: { 'Marque': 'Condor', 'Référence': 'CON-F710LB', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '7 kg', 'Vitesse d\'essorage': '1000 Trs/min', 'Couleur': 'Noir', 'Prix HT': '955.000 TND' } },
+            { id: 70, name: 'Machine à Laver Condor Frontale 8kg 1200 Trs Blanc WAF-KU241L3W', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WAF-KU241L3W', price: 1085, img: 'img/products/CONDOR/MAL/WAF-KU241L3W.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: WAF-KU241L3W', specs: { 'Marque': 'Condor', 'Référence': 'WAF-KU241L3W', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '8 kg', 'Vitesse d\'essorage': '1200 Trs/min', 'Couleur': 'Blanc', 'Prix HT': '1 085.000 TND' } },
+            { id: 71, name: 'Machine à Laver Condor Frontale 8kg 1200 Trs Black CON-F812DS', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F812DS', price: 1135, img: 'img/products/CONDOR/MAL/CON-F812DS.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F812DS', specs: { 'Marque': 'Condor', 'Référence': 'CON-F812DS', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '8 kg', 'Vitesse d\'essorage': '1200 Trs/min', 'Couleur': 'Noir', 'Prix HT': '1 135.000 TND' } },
+            { id: 72, name: 'Machine à Laver Condor Frontale 8kg 1200 Trs Black CON-F812DB', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F812DB', price: 1160, img: 'img/products/CONDOR/MAL/CON-F812DB.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F812DB', specs: { 'Marque': 'Condor', 'Référence': 'CON-F812DB', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '8 kg', 'Vitesse d\'essorage': '1200 Trs/min', 'Couleur': 'Noir', 'Prix HT': '1 160.000 TND' } },
+            { id: 73, name: 'Machine à Laver Condor Frontale 9kg 1200 Trs TR/BL CON-F912D', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F912D', price: 1140, img: 'img/products/CONDOR/MAL/CON-F912D.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F912D', specs: { 'Marque': 'Condor', 'Référence': 'CON-F912D', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '9 kg', 'Vitesse d\'essorage': '1200 Trs/min', 'Couleur': 'Blanc', 'Prix HT': '1 140.000 TND' } },
+            { id: 74, name: 'Machine à Laver Condor Frontale 9kg 1200 Trs Noir CON-F912IB', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F912IB', price: 1260, img: 'img/products/CONDOR/MAL/CON-F912IB.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F912IB', specs: { 'Marque': 'Condor', 'Référence': 'CON-F912IB', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '9 kg', 'Vitesse d\'essorage': '1200 Trs/min', 'Couleur': 'Noir', 'Prix HT': '1 260.000 TND' } },
+            { id: 75, name: 'Machine à Laver Condor Frontale 9kg 1200 RPM Dark Silver CON-F912DS', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-F912DS', price: 1200, img: 'img/products/CONDOR/MAL/CON-F912DS.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-F912DS', specs: { 'Marque': 'Condor', 'Référence': 'CON-F912DS', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '9 kg', 'Vitesse d\'essorage': '1200 Trs/min', 'Couleur': 'Dark Silver', 'Prix HT': '1 200.000 TND' } },
+            { id: 76, name: 'Machine à Laver Condor Frontale 10.5 kg 1200 Trs Noir CON-FM12IB', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'CON-FM12IB', price: 1470, img: 'img/products/CONDOR/MAL/CON-FM12IB.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: CON-FM12IB', specs: { 'Marque': 'Condor', 'Référence': 'CON-FM12IB', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '10.5 kg', 'Vitesse d\'essorage': '1200 Trs/min', 'Couleur': 'Noir', 'Prix HT': '1 470.000 TND' } },
+            { id: 77, name: 'Machine à Laver Condor Luna 10.5 Kg Inverter 1400 Trs Titanium WAF-XLB441L1T', brand: 'Condor', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WAF-XLB441L1T', price: 1450, img: 'img/products/CONDOR/MAL/WAF-XLB441L1T.jpg', isNew: false, desc: 'Machine à Laver Condor Frontale - Réf: WAF-XLB441L1T', specs: { 'Marque': 'Condor', 'Référence': 'WAF-XLB441L1T', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Capacité': '10.5 kg', 'Moteur': 'Inverter', 'Vitesse d\'essorage': '1400 Trs/min', 'Couleur': 'Titanium', 'Prix HT': '1 450.000 TND' } },
+            { id: 78, name: 'Lave-Vaisselle Condor 16 couverts Inverter Aff Inox CLV-LUX16X', brand: 'Condor', category: 'LAVE_VAISSELLE', categoryLabel: 'Lave-Vaisselle', reference: 'CLV-LUX16X', price: 1470, img: 'img/products/CONDOR/LAVE VAISSELLE/CLV-LUX16X.jpg', isNew: false, desc: 'Lave-Vaisselle Condor - Réf: CLV-LUX16X', specs: { 'Marque': 'Condor', 'Référence': 'CLV-LUX16X', 'Catégorie': 'Lave-Vaisselle', 'Capacité': '16 couverts', 'Moteur': 'Inverter', 'Affichage': 'Oui', 'Couleur': 'Inox', 'Prix HT': '1 470.000 TND' } },
+            { id: 79, name: 'Lave-Vaisselle Condor 16 couverts Inverter Aff Noir CLV-LUX16XB', brand: 'Condor', category: 'LAVE_VAISSELLE', categoryLabel: 'Lave-Vaisselle', reference: 'CLV-LUX16XB', price: 1525, img: 'img/products/CONDOR/LAVE VAISSELLE/CLV-LUX16XB.webp', isNew: false, desc: 'Lave-Vaisselle Condor - Réf: CLV-LUX16XB', specs: { 'Marque': 'Condor', 'Référence': 'CLV-LUX16XB', 'Catégorie': 'Lave-Vaisselle', 'Capacité': '16 couverts', 'Moteur': 'Inverter', 'Affichage': 'Oui', 'Couleur': 'Noir', 'Prix HT': '1 525.000 TND' } },
+            { id: 80, name: 'Mini Bar Condor 45L CRF-T5GM8', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRF-T5GM8', price: 375, img: 'img/products/CONDOR/REF/CRF-T5GM8.webp', isNew: false, desc: 'Mini Bar Condor - Réf: CRF-T5GM8', specs: { 'Marque': 'Condor', 'Référence': 'CRF-T5GM8', 'Catégorie': 'Réfrigérateur', 'Type': 'Mini Bar', 'Capacité': '45 L', 'Prix HT': '375.000 TND' } },
+            { id: 81, name: 'Réfrigérateur Condor Rouge avec Distributeur d\'eau CRF-T24GD14R', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRF-T24GD14R', price: 710, img: 'img/products/CONDOR/REF/CRF-T24GD14R.jpg', isNew: false, desc: 'Réfrigérateur Condor Rouge - Réf: CRF-T24GD14R', specs: { 'Marque': 'Condor', 'Référence': 'CRF-T24GD14R', 'Catégorie': 'Réfrigérateur', 'Distributeur': 'Distributeur d\'eau', 'Gaz': 'R601a', 'Couleur': 'Rouge', 'Prix HT': '710.000 TND' } },
+            { id: 82, name: 'Réfrigérateur Condor DF 345L Blanc avec Serrure CRD45V4W-S', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRD45V4W-S', price: 1095, img: 'img/products/CONDOR/REF/CRD45V4W-S.jpg', isNew: false, desc: 'Réfrigérateur Condor DF 345L - Réf: CRD45V4W-S', specs: { 'Marque': 'Condor', 'Référence': 'CRD45V4W-S', 'Catégorie': 'Réfrigérateur', 'Capacité': '345 L', 'Serrure': 'Avec serrure', 'Couleur': 'Blanc', 'Prix HT': '1 095.000 TND' } },
+            { id: 83, name: 'Réfrigérateur Condor DF 345L Gris avec Serrure CRD45V4G-S', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRD45V4G-S', price: 1180, img: 'img/products/CONDOR/REF/CRD45V4G-S.jpg', isNew: false, desc: 'Réfrigérateur Condor DF 345L - Réf: CRD45V4G-S', specs: { 'Marque': 'Condor', 'Référence': 'CRD45V4G-S', 'Catégorie': 'Réfrigérateur', 'Capacité': '345 L', 'Serrure': 'Avec serrure', 'Couleur': 'Gris', 'Prix HT': '1 180.000 TND' } },
+            { id: 84, name: 'Réfrigérateur Condor DF 345L Inox avec Serrure CRD45V4X-S', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRD45V4X-S', price: 1200, img: 'img/products/CONDOR/REF/CRD45V4X-S.webp', isNew: false, desc: 'Réfrigérateur Condor DF 345L - Réf: CRD45V4X-S', specs: { 'Marque': 'Condor', 'Référence': 'CRD45V4X-S', 'Catégorie': 'Réfrigérateur', 'Capacité': '345 L', 'Serrure': 'Avec serrure', 'Couleur': 'Inox', 'Prix HT': '1 200.000 TND' } },
+            { id: 85, name: 'Réfrigérateur Condor 2P No-Frost 415L Blanc CRDN560-W', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRDN560-W', price: 1580, img: 'img/products/CONDOR/REF/CRDN560-W.jpg', isNew: false, desc: 'Réfrigérateur Condor 2 Portes No-Frost - Réf: CRDN560-W', specs: { 'Marque': 'Condor', 'Référence': 'CRDN560-W', 'Catégorie': 'Réfrigérateur', 'Type': '2 Portes', 'Système de froid': 'No-Frost', 'Capacité': '415 L', 'Couleur': 'Blanc', 'Prix HT': '1 580.000 TND' } },
+            { id: 86, name: 'Réfrigérateur Condor 2P No-Frost 470L Blanc CRDN630W', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRDN630W', price: 1710, img: 'img/products/CONDOR/REF/CRDN630W.jpg', isNew: false, desc: 'Réfrigérateur Condor 2 Portes No-Frost - Réf: CRDN630W', specs: { 'Marque': 'Condor', 'Référence': 'CRDN630W', 'Catégorie': 'Réfrigérateur', 'Type': '2 Portes', 'Système de froid': 'No-Frost', 'Capacité': '470 L', 'Couleur': 'Blanc', 'Prix HT': '1 710.000 TND' } },
+            { id: 87, name: 'Réfrigérateur Condor SBS No-Frost 640L Dark Inox CRS81NDX', brand: 'Condor', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'CRS81NDX', price: 2740, img: 'img/products/CONDOR/REF/CRS81NDX.jpg', isNew: false, desc: 'Réfrigérateur Condor Side By Side No-Frost - Réf: CRS81NDX', specs: { 'Marque': 'Condor', 'Référence': 'CRS81NDX', 'Catégorie': 'Réfrigérateur', 'Type': 'Side By Side', 'Système de froid': 'No-Frost', 'Capacité': '640 L', 'Affichage': 'Afficheur intégré', 'Couleur': 'Dark Inox', 'Prix HT': '2 740.000 TND' } },
+            { id: 88, name: 'Climatiseur Condor 12K BTU Super Tropical Alpha CS12-AL84T3', brand: 'Condor', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'CS12-AL84T3', price: 1540, img: 'img/products/CONDOR/clim/CS12-AL84T3.jpg', isNew: false, desc: 'Climatiseur Condor Super Tropical Alpha - Réf: CS12-AL84T3', specs: { 'Marque': 'Condor', 'Référence': 'CS12-AL84T3', 'Catégorie': 'Climatiseur', 'Capacité': '12000 BTU', 'Type': 'Super Tropical', 'Série': 'Alpha', 'Prix HT': '1 540.000 TND' } },
+            { id: 89, name: 'Table de Cuisson Condor 4 Feux Fonte Inox CTE64WAS1X', brand: 'Condor', category: 'PLAQUE_CUISSON', categoryLabel: 'Plaque de Cuisson', reference: 'CTE64WAS1X', price: 304, img: 'img/products/CONDOR/ENCASTRABLE/CTE64WAS1X.jpg', isNew: false, desc: 'Table de Cuisson Condor 4 Feux - Réf: CTE64WAS1X', specs: { 'Marque': 'Condor', 'Référence': 'CTE64WAS1X', 'Catégorie': 'Plaque de Cuisson', 'Nombre de feux': '4 Feux', 'Grilles': 'Fonte', 'Couleur': 'Inox', 'Prix HT': '304.000 TND' } },
+            { id: 90, name: 'Table de Cuisson Encastrable Condor 5 Feux Wok Fonte Inox CTE75W-FL2X', brand: 'Condor', category: 'PLAQUE_CUISSON', categoryLabel: 'Plaque de Cuisson', reference: 'CTE75W-FL2X', price: 552, img: 'img/products/CONDOR/ENCASTRABLE/CTE75W-FL2X.jpg', isNew: false, desc: 'Table de Cuisson Encastrable Condor 5 Feux WOK - Réf: CTE75W-FL2X', specs: { 'Marque': 'Condor', 'Référence': 'CTE75W-FL2X', 'Catégorie': 'Plaque de Cuisson', 'Type': 'Encastrable', 'Nombre de feux': '5 Feux dont 1 WOK', 'Grilles': 'Fonte', 'Couleur': 'Inox', 'Prix HT': '552.000 TND' } },
+            { id: 91, name: 'Hotte Casquette Condor 60cm 320m3/h Inox CH-Q6300X', brand: 'Condor', category: 'HOTTE', categoryLabel: 'Hotte', reference: 'CH-Q6300X', price: 185, img: 'img/products/CONDOR/ENCASTRABLE/CH-Q6300X.jpg', isNew: false, desc: 'Hotte Casquette Condor 60cm Inox - Réf: CH-Q6300X', specs: { 'Marque': 'Condor', 'Référence': 'CH-Q6300X', 'Catégorie': 'Hotte', 'Type': 'Casquette', 'Largeur': '60 cm', 'Débit d\'air': '320 m3/h', 'Couleur': 'Inox', 'Prix HT': '185.000 TND' } },
+            { id: 92, name: 'Hotte Casquette Condor 60cm 320m3/h Noire CH-Q6300N', brand: 'Condor', category: 'HOTTE', categoryLabel: 'Hotte', reference: 'CH-Q6300N', price: 185, img: 'img/products/CONDOR/ENCASTRABLE/CH-Q6300N.jpg', isNew: false, desc: 'Hotte Casquette Condor 60cm Noire - Réf: CH-Q6300N', specs: { 'Marque': 'Condor', 'Référence': 'CH-Q6300N', 'Catégorie': 'Hotte', 'Type': 'Casquette', 'Largeur': '60 cm', 'Débit d\'air': '320 m3/h', 'Couleur': 'Noire', 'Prix HT': '185.000 TND' } },
+            { id: 93, name: 'Hotte Murale Décorative Condor 60cm Miroir/Noir CH-A640XGB', brand: 'Condor', category: 'HOTTE', categoryLabel: 'Hotte', reference: 'CH-A640XGB', price: 365, img: 'img/products/CONDOR/ENCASTRABLE/CH-A640XGB.jpg', isNew: false, desc: 'Hotte Murale Décorative Condor 60cm - Réf: CH-A640XGB', specs: { 'Marque': 'Condor', 'Référence': 'CH-A640XGB', 'Catégorie': 'Hotte', 'Type': 'Murale Décorative', 'Largeur': '60 cm', 'Couleur': 'Miroir/Noir', 'Prix HT': '365.000 TND' } },
+            { id: 94, name: 'Hotte Cheminée Condor 60cm 450m3/h Inox CH-L640X', brand: 'Condor', category: 'HOTTE', categoryLabel: 'Hotte', reference: 'CH-L640X', price: 415, img: 'img/products/CONDOR/ENCASTRABLE/CH-L640X.jpg', isNew: false, desc: 'Hotte Cheminée Condor 60cm Inox - Réf: CH-L640X', specs: { 'Marque': 'Condor', 'Référence': 'CH-L640X', 'Catégorie': 'Hotte', 'Type': 'Cheminée', 'Largeur': '60 cm', 'Débit d\'air': '450 m3/h', 'Couleur': 'Inox', 'Prix HT': '415.000 TND' } },
+            { id: 95, name: 'Robot de Cuisine Condor Multi Fonction Master Mix 750W RC-MM1SN', brand: 'Condor', category: 'ROBOT_CUISINE', categoryLabel: 'Robot de Cuisine', reference: 'RC-MM1SN', price: 230, img: 'img/products/CONDOR/PEM/RC-MM1SN.webp', isNew: false, desc: 'Robot de Cuisine Condor Multi Fonction - Réf: RC-MM1SN', specs: { 'Marque': 'Condor', 'Référence': 'RC-MM1SN', 'Catégorie': 'Robot de Cuisine', 'Puissance': '750 W', 'Type': 'Multi Fonction', 'Modèle': 'Master Mix', 'Prix HT': '230.000 TND' } },
+            { id: 96, name: 'Robot de Cuisine Condor Multi Fonction Versa Ch RC-MV1SN', brand: 'Condor', category: 'ROBOT_CUISINE', categoryLabel: 'Robot de Cuisine', reference: 'RC-MV1SN', price: 345, img: 'img/products/CONDOR/PEM/RC-MV1SN.webp', isNew: false, desc: 'Robot de Cuisine Condor Multi Fonction Versa Ch - Réf: RC-MV1SN', specs: { 'Marque': 'Condor', 'Référence': 'RC-MV1SN', 'Catégorie': 'Robot de Cuisine', 'Type': 'Multi Fonction', 'Modèle': 'Versa Ch', 'Prix HT': '345.000 TND' } },
+            { id: 97, name: 'Robot de Cuisine Condor Mono Fonction Master Mix 750W RC-MU1SN', brand: 'Condor', category: 'ROBOT_CUISINE', categoryLabel: 'Robot de Cuisine', reference: 'RC-MU1SN', price: 195, img: 'img/products/CONDOR/PEM/RC-MU1SN.jpg', isNew: false, desc: 'Robot de Cuisine Condor Mono Fonction - Réf: RC-MU1SN', specs: { 'Marque': 'Condor', 'Référence': 'RC-MU1SN', 'Catégorie': 'Robot de Cuisine', 'Puissance': '750 W', 'Type': 'Mono Fonction', 'Modèle': 'Master Mix', 'Prix HT': '195.000 TND' } },
+            { id: 98, name: 'Batteur à Main Condor Master Mix 400W Inox/Noir BT-MH2XN', brand: 'Condor', category: 'BATTEUR', categoryLabel: 'Batteur à Main', reference: 'BT-MH2XN', price: 62, img: 'img/products/CONDOR/PEM/BT-MH2XN.jpg', isNew: false, desc: 'Batteur à Main Condor - Réf: BT-MH2XN', specs: { 'Marque': 'Condor', 'Référence': 'BT-MH2XN', 'Catégorie': 'Batteur à Main', 'Puissance': '400 W', 'Modèle': 'Master Mix', 'Couleur': 'Inox/Noir', 'Prix HT': '62.000 TND' } },
+
+
+            { id: 99, name: 'Réfrigérateur Combiné Hisense No-Frost 320L Silver RB1N300NMC', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RB1N300NMC/(RD39)', price: 1815, img: 'img/products/Hisense/REF/RB1N300NMC(RD39).webp', isNew: false, desc: 'Réfrigérateur Hisense Combiné - Réf: RB1N300NMC/(RD39)', specs: { 'Marque': 'Hisense', 'Référence': 'RB1N300NMC/(RD39)', 'Catégorie': 'Réfrigérateur', 'Type': 'Combiné', 'Système de froid': 'No-Frost', 'Capacité': '320 L', 'Affichage / Fontaine': 'Oui', 'Couleur': 'Silver', 'Prix HT': '1 815.000 TND' } },
+            { id: 100, name: 'Réfrigérateur Combiné Hisense No-Frost 320L Noir RB1N300NMF1', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RB1N300NMF1', price: 1840, img: 'img/products/Hisense/REF/RB1N300NMF1.webp', isNew: false, desc: 'Réfrigérateur Hisense Combiné - Réf: RB1N300NMF1', specs: { 'Marque': 'Hisense', 'Référence': 'RB1N300NMF1', 'Catégorie': 'Réfrigérateur', 'Type': 'Combiné', 'Système de froid': 'No-Frost', 'Capacité': '320 L', 'Affichage / Fontaine': 'Oui', 'Couleur': 'Noir', 'Prix HT': '1 840.000 TND' } },
+            { id: 101, name: 'Réfrigérateur Hisense No-Frost 470L Premium Inox RT-60W', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RT-60W', price: 2020, img: 'img/products/Hisense/REF/RT-60W.jpg', isNew: false, desc: 'Réfrigérateur Hisense Premium - Réf: RT-60W', specs: { 'Marque': 'Hisense', 'Référence': 'RT-60W', 'Catégorie': 'Réfrigérateur', 'Système de froid': 'No-Frost', 'Capacité': '470 L', 'Affichage / Fontaine': 'Oui', 'Couleur': 'Inox', 'Prix HT': '2 020.000 TND' } },
+            { id: 102, name: 'Réfrigérateur Hisense SBS No-Frost 518L Inox Silver RS3P518NMC', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RS3P518NMC/ (RC67)', price: 3050, img: 'img/products/Hisense/REF/RS3P518NMC (RC67).webp', isNew: false, desc: 'Réfrigérateur Hisense Side By Side - Réf: RS3P518NMC/ (RC67)', specs: { 'Marque': 'Hisense', 'Référence': 'RS3P518NMC/ (RC67)', 'Catégorie': 'Réfrigérateur', 'Type': 'Side By Side', 'Système de froid': 'No-Frost', 'Capacité': '518 L', 'Couleur': 'Inox Silver', 'Prix HT': '3 050.000 TND' } },
+            { id: 103, name: 'Réfrigérateur Hisense SBS No-Frost 640L Inox Silver RS5P668NMC', brand: 'Hisense', category: 'REF', categoryLabel: 'Réfrigérateur', reference: 'RS5P668NMC/( RC 87)', price: 3680, img: 'img/products/Hisense/REF/RS5P668NMC(RC87).jpg', isNew: false, desc: 'Réfrigérateur Hisense Side By Side - Réf: RS5P668NMC/( RC 87)', specs: { 'Marque': 'Hisense', 'Référence': 'RS5P668NMC/( RC 87)', 'Catégorie': 'Réfrigérateur', 'Type': 'Side By Side', 'Système de froid': 'No-Frost', 'Capacité': '640 L', 'Affichage / Fontaine': 'Oui', 'Couleur': 'Inox Silver', 'Prix HT': '3 680.000 TND' } },
+            { id: 104, name: 'Congélateur Horizontal Hisense Convertible Blanc 238L FC-33DT4SAW', brand: 'Hisense', category: 'CONGELATEUR', categoryLabel: 'Congélateur', reference: 'FC-33DT4SAW', price: 970, img: 'img/products/Hisense/CONG/FC-33DT4SAW.webp', isNew: false, desc: 'Congélateur Horizontal Hisense Convertible - Réf: FC-33DT4SAW', specs: { 'Marque': 'Hisense', 'Référence': 'FC-33DT4SAW', 'Catégorie': 'Congélateur', 'Type': 'Horizontal', 'Spécificité': 'Convertible', 'Capacité': '238 L', 'Couleur': 'Blanc', 'Prix HT': '970.000 TND' } },
+            { id: 105, name: 'Congélateur Horizontal Hisense Convertible Blanc 286L FC-40DT4SAW1', brand: 'Hisense', category: 'CONGELATEUR', categoryLabel: 'Congélateur', reference: 'FC-40DT4SAW1', price: 1020, img: 'img/products/Hisense/CONG/FC-40DT4SAW1.jpg', isNew: false, desc: 'Congélateur Horizontal Hisense Convertible - Réf: FC-40DT4SAW1', specs: { 'Marque': 'Hisense', 'Référence': 'FC-40DT4SAW1', 'Catégorie': 'Congélateur', 'Type': 'Horizontal', 'Spécificité': 'Convertible', 'Capacité': '286 L', 'Couleur': 'Blanc', 'Prix HT': '1 020.000 TND' } },
+            { id: 106, name: 'Congélateur Horizontal Hisense Blanc 297L FC-39DD', brand: 'Hisense', category: 'CONGELATEUR', categoryLabel: 'Congélateur', reference: 'FC-39DD', price: 1170, img: 'img/products/Hisense/CONG/FC-39DD.jpg', isNew: false, desc: 'Congélateur Horizontal Hisense - Réf: FC-39DD', specs: { 'Marque': 'Hisense', 'Référence': 'FC-39DD', 'Catégorie': 'Congélateur', 'Type': 'Horizontal', 'Capacité': '297 L', 'Couleur': 'Blanc', 'Prix HT': '1 170.000 TND' } },
+            { id: 107, name: 'Machine à Laver Hisense Top 14 kg Titanium Silver WT3K1423UT', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT3K1423UT', price: 1550, img: 'img/products/Hisense/MAL/WT3K1423UT.jpg', isNew: false, desc: 'Machine à Laver Hisense Chargement par le dessus - Réf: WT3K1423UT', specs: { 'Marque': 'Hisense', 'Référence': 'WT3K1423UT', 'Catégorie': 'Machine à Laver', 'Type': 'Top Load', 'Capacité': '14 kg', 'Couleur': 'Titanium Silver', 'Prix HT': '1 550.000 TND' } },
+            { id: 108, name: 'Machine à Laver Hisense Top 18 kg Dark Silver WT3I1823UB', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WT3I1823UB', price: 1660, img: 'img/products/Hisense/MAL/WT3I1823UB.webp', isNew: false, desc: 'Machine à Laver Hisense Chargement par le dessus - Réf: WT3I1823UB', specs: { 'Marque': 'Hisense', 'Référence': 'WT3I1823UB', 'Catégorie': 'Machine à Laver', 'Type': 'Top Load', 'Capacité': '18 kg', 'Couleur': 'Dark Silver', 'Prix HT': '1 660.000 TND' } },
+            { id: 109, name: 'Machine à Laver Hisense Frontale 8kg 1400 Trs Inverter Steam Titanium Silver WFQP8014EVMT', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WFQP8014EVMT', price: 1200, img: 'img/products/Hisense/MAL/WFQP8014EVMT.jpg', isNew: false, desc: 'Machine à Laver Hisense Frontale Inverter Steam - Réf: WFQP8014EVMT', specs: { 'Marque': 'Hisense', 'Référence': 'WFQP8014EVMT', 'Catégorie': 'Machine à Laver', 'Type': 'Frontale', 'Moteur': 'Inverter', 'Option': 'Vapeur (Steam)', 'Capacité': '8 kg', 'Vitesse d\'essorage': '1400 Trs/min', 'Couleur': 'Titanium Silver', 'Prix HT': '1 200.000 TND' } },
+            { id: 110, name: 'Machine à Laver Hisense 10.5 kg Smart Inverter Blanc WF3S1043BW', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WF3S1043BW', price: 1440, img: 'img/products/Hisense/MAL/WF3S1043BW.jpg', isNew: false, desc: 'Machine à Laver Hisense Smart Inverter - Réf: WF3S1043BW', specs: { 'Marque': 'Hisense', 'Référence': 'WF3S1043BW', 'Catégorie': 'Machine à Laver', 'Moteur': 'Smart Inverter', 'Capacité': '10.5 kg', 'Couleur': 'Blanc', 'Prix HT': '1 440.000 TND' } },
+            { id: 111, name: 'Machine à Laver Hisense 12 kg Smart Inverter Vapeur Titanium WF3S1243BT', brand: 'Hisense', category: 'MAL', categoryLabel: 'Machine à Laver', reference: 'WF3S1243BT', price: 1620, img: 'img/products/Hisense/MAL/WF3S1243BT.webp', isNew: false, desc: 'Machine à Laver Hisense Smart Inverter Vapeur - Réf: WF3S1243BT', specs: { 'Marque': 'Hisense', 'Référence': 'WF3S1243BT', 'Catégorie': 'Machine à Laver', 'Moteur': 'Smart Inverter', 'Option': 'Vapeur', 'Capacité': '12 kg', 'Couleur': 'Titanium', 'Prix HT': '1 620.000 TND' } },
+            { id: 112, name: 'Téléviseur Hisense 43" Smart UHD Android 43A4200G', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '43A4200G', price: 828, img: 'img/products/Hisense/TV/43A4200G.jpg', isNew: false, desc: 'Téléviseur Hisense 43" Smart Android - Réf: 43A4200G', specs: { 'Marque': 'Hisense', 'Référence': '43A4200G', 'Catégorie': 'Téléviseur', 'Taille': '43 pouces', 'Résolution': 'UHD 4K', 'Système': 'Android TV', 'Prix HT': '828.000 TND' } },
+            { id: 113, name: 'Téléviseur Hisense 50" Smart UHD 4K Google TV 50A6GN', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '50A6GN', price: 1190, img: 'img/products/Hisense/TV/50A6GN.jpg', isNew: false, desc: 'Téléviseur Hisense 50" Smart Google TV - Réf: 50A6GN', specs: { 'Marque': 'Hisense', 'Référence': '50A6GN', 'Catégorie': 'Téléviseur', 'Taille': '50 pouces', 'Résolution': 'UHD 4K', 'Système': 'Google TV', 'Prix HT': '1 190.000 TND' } },
+            { id: 114, name: 'Téléviseur Hisense 55" 4K UHD A6500N Series Google TV 55A6500N', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '55A6500N', price: 1340, img: 'img/products/Hisense/TV/55A6500N.jpg', isNew: false, desc: 'Téléviseur Hisense 55" A6500N Google TV - Réf: 55A6500N', specs: { 'Marque': 'Hisense', 'Référence': '55A6500N', 'Catégorie': 'Téléviseur', 'Taille': '55 pouces', 'Résolution': 'UHD 4K', 'Série': 'A6500N', 'Système': 'Google TV', 'Prix HT': '1 340.000 TND' } },
+            { id: 115, name: 'Téléviseur Hisense 65" 4K UHD A6500N Series Google TV 65A6500N', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '65A6500N', price: 2215, img: 'img/products/Hisense/TV/65A6500N.webp', isNew: false, desc: 'Téléviseur Hisense 65" A6500N Google TV - Réf: 65A6500N', specs: { 'Marque': 'Hisense', 'Référence': '65A6500N', 'Catégorie': 'Téléviseur', 'Taille': '65 pouces', 'Résolution': 'UHD 4K', 'Série': 'A6500N', 'Système': 'Google TV', 'Prix HT': '2 215.000 TND' } },
+            { id: 116, name: 'Téléviseur Hisense 75" 4K UHD A6500N Series Google TV 75A6500N', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '75A6500N', price: 3600, img: 'img/products/Hisense/TV/75A6500N.jpg', isNew: false, desc: 'Téléviseur Hisense 75" A6500N Google TV - Réf: 75A6500N', specs: { 'Marque': 'Hisense', 'Référence': '75A6500N', 'Catégorie': 'Téléviseur', 'Taille': '75 pouces', 'Résolution': 'UHD 4K', 'Série': 'A6500N', 'Système': 'Google TV', 'Prix HT': '3 600.000 TND' } },
+            { id: 117, name: 'Téléviseur Hisense 85" Smart UHD 4K (Pack avec 43") 85A6N +43A4200G', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '85A6N +43A4200G', price: 5920, img: 'img/products/Hisense/TV/85A6N +43A4200G.webp', isNew: false, desc: 'Téléviseur Hisense 85" Smart UHD 4K - Pack - Réf: 85A6N +43A4200G', specs: { 'Marque': 'Hisense', 'Référence': '85A6N +43A4200G', 'Catégorie': 'Téléviseur', 'Taille': '85 pouces', 'Résolution': 'UHD 4K', 'Pack': 'Inclus un téléviseur 43" (43A4200G)', 'Prix HT': '5 920.000 TND' } },
+            { id: 118, name: 'Téléviseur Hisense 85" QLED UHD 4K Smart TV (Pack avec 43") 85Q6N +43A4200G', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '85Q6N +43A4200G', price: 6120, img: 'img/products/Hisense/TV/85Q6N +43A4200G.jpg', isNew: false, desc: 'Téléviseur Hisense 85" QLED Smart TV - Pack - Réf: 85Q6N +43A4200G', specs: { 'Marque': 'Hisense', 'Référence': '85Q6N +43A4200G', 'Catégorie': 'Téléviseur', 'Taille': '85 pouces', 'Technologie': 'QLED', 'Résolution': 'UHD 4K', 'Pack': 'Inclus un téléviseur 43" (43A4200G)', 'Prix HT': '6 120.000 TND' } },
+            { id: 119, name: 'Téléviseur Hisense QLED UHD 100" Serie Q7 (Pack avec 50") 100Q7N+ 50A6GN', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '100Q7N+ 50A6GN', price: 9240, img: 'img/products/Hisense/TV/100Q7N+ 50A6GN.webp', isNew: false, desc: 'Téléviseur Hisense 100" QLED Série Q7 - Pack - Réf: 100Q7N+ 50A6GN', specs: { 'Marque': 'Hisense', 'Référence': '100Q7N+ 50A6GN', 'Catégorie': 'Téléviseur', 'Taille': '100 pouces', 'Technologie': 'QLED', 'Série': 'Q7', 'Résolution': 'UHD 4K', 'Pack': 'Inclus un téléviseur 50" (50A6GN)', 'Prix HT': '9 240.000 TND' } },
+            { id: 120, name: 'Téléviseur Hisense 100" 4K UHD Smart TV X-Fusion Laser Light 100L5GE', brand: 'Hisense', category: 'TV', categoryLabel: 'Téléviseur', reference: '100L5GE', price: 13200, discountPrice: 6999, img: 'img/products/Hisense/TV/100L5GE.jpg', isNew: false, desc: 'Téléviseur Hisense 100" X-Fusion Laser Light - Réf: 100L5GE', specs: { 'Marque': 'Hisense', 'Référence': '100L5GE', 'Catégorie': 'Téléviseur', 'Taille': '100 pouces', 'Technologie': 'X-Fusion Laser Light', 'Résolution': 'UHD 4K', 'Remarque': 'En promo PVC: 6999', 'Prix HT': '13 200.000 TND' } },
+            { id: 121, name: 'Climatiseur Hisense 12000 BTU Inverter Chaud/Froid AS-12UW4S', brand: 'Hisense', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'AS-12UW4S', price: 1610, img: 'img/products/Hisense/CLIM/AS-12UW4S.webp', isNew: false, desc: 'Climatiseur Hisense 12000 Inverter CF - Réf: AS-12UW4S', specs: { 'Marque': 'Hisense', 'Référence': 'AS-12UW4S', 'Catégorie': 'Climatiseur', 'Capacité': '12000 BTU', 'Technologie': 'Inverter', 'Mode': 'Chaud/Froid', 'Prix HT': '1 610.000 TND' } },
+            { id: 122, name: 'Climatiseur Hisense 24000 BTU ON/OFF Chaud/Froid AS-24HW4S', brand: 'Hisense', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'AS-24HW4S', price: 2440, img: 'img/products/Hisense/CLIM/AS-24HW4S.jpg', isNew: false, desc: 'Climatiseur Hisense 24000 ON/OFF CF - Réf: AS-24HW4S', specs: { 'Marque': 'Hisense', 'Référence': 'AS-24HW4S', 'Catégorie': 'Climatiseur', 'Capacité': '24000 BTU', 'Technologie': 'ON/OFF', 'Mode': 'Chaud/Froid', 'Prix HT': '2 440.000 TND' } },
+            { id: 123, name: 'Climatiseur Hisense 24000 BTU Inverter Chaud/Froid AS-24UW4S', brand: 'Hisense', category: 'CLIM', categoryLabel: 'Climatiseur', reference: 'AS-24UW4S', price: 2640, img: 'img/products/Hisense/CLIM/AS-24UW4S.jpg', isNew: false, desc: 'Climatiseur Hisense 24000 Inverter CF - Réf: AS-24UW4S', specs: { 'Marque': 'Hisense', 'Référence': 'AS-24UW4S', 'Catégorie': 'Climatiseur', 'Capacité': '24000 BTU', 'Technologie': 'Inverter', 'Mode': 'Chaud/Froid', 'Prix HT': '2 640.000 TND' } },
+            { id: 124, name: 'Four Micro-ondes Hisense 20L 700W Silver H20MOMP1HG', brand: 'Hisense', category: 'MICRO_ONDE', categoryLabel: 'Micro-ondes', reference: 'H20MOMP1HG', price: 294, img: 'img/products/Hisense/MICRO ONDE/H20MOMP1HG.jpg', isNew: false, desc: 'Four Micro-ondes Hisense 20L Silver - Réf: H20MOMP1HG', specs: { 'Marque': 'Hisense', 'Référence': 'H20MOMP1HG', 'Catégorie': 'Micro-ondes', 'Capacité': '20 L', 'Puissance': '700 W', 'Couleur': 'Silver', 'Prix HT': '294.000 TND' } },
+            { id: 125, name: 'Micro-ondes Hisense 20L 700W Blanc Contrôle Digital H20MOWS11', brand: 'Hisense', category: 'MICRO_ONDE', categoryLabel: 'Micro-ondes', reference: 'H20MOWS11', price: 305, img: 'img/products/Hisense/MICRO ONDE/H20MOWS11.webp', isNew: false, desc: 'Micro-ondes Hisense 20L Digital - Réf: H20MOWS11', specs: { 'Marque': 'Hisense', 'Référence': 'H20MOWS11', 'Catégorie': 'Micro-ondes', 'Capacité': '20 L', 'Puissance': '700 W', 'Contrôle': 'Digital', 'Couleur': 'Blanc', 'Prix HT': '305.000 TND' } },
+            { id: 126, name: 'Micro-ondes Hisense 25L 900W Blanc Contrôle Digital H25MOWS7H', brand: 'Hisense', category: 'MICRO_ONDE', categoryLabel: 'Micro-ondes', reference: 'H25MOWS7H', price: 405, img: 'img/products/Hisense/MICRO ONDE/H25MOWS7H.webp', isNew: false, desc: 'Micro-ondes Hisense 25L Digital - Réf: H25MOWS7H', specs: { 'Marque': 'Hisense', 'Référence': 'H25MOWS7H', 'Catégorie': 'Micro-ondes', 'Capacité': '25 L', 'Puissance': '900 W', 'Contrôle': 'Digital', 'Couleur': 'Blanc', 'Prix HT': '405.000 TND' } },
+            { id: 127, name: 'Four Micro-ondes Hisense 25L 900W Noir Contrôle Digital H25MOBS6G', brand: 'Hisense', category: 'MICRO_ONDE', categoryLabel: 'Micro-ondes', reference: 'H25MOBS6G', price: 385, img: 'img/products/Hisense/MICRO ONDE/H25MOBS6G.jpg', isNew: false, desc: 'Four Micro-ondes Hisense 25L Noir Digital - Réf: H25MOBS6G', specs: { 'Marque': 'Hisense', 'Référence': 'H25MOBS6G', 'Catégorie': 'Micro-ondes', 'Capacité': '25 L', 'Puissance': '900 W', 'Contrôle': 'Digital', 'Couleur': 'Noir', 'Prix HT': '385.000 TND' } },
+            { id: 128, name: 'Aspirateur Hisense Sans Sac 2300W Rouge VC2302GALRCY', brand: 'Hisense', category: 'ASPIRATEUR', categoryLabel: 'Aspirateur', reference: 'VC2302GALRCY', price: 330, img: 'img/products/Hisense/PEM/VC2302GALRCY.jpg', isNew: false, desc: 'Aspirateur Hisense Sans Sac - Réf: VC2302GALRCY', specs: { 'Marque': 'Hisense', 'Référence': 'VC2302GALRCY', 'Catégorie': 'Aspirateur', 'Type': 'Sans Sac', 'Puissance': '2300 W', 'Couleur': 'Rouge', 'Prix HT': '330.000 TND' } },
+            { id: 129, name: 'Air Fryer Hisense 6.7L 1350W Digital H06AFBS2S3', brand: 'Hisense', category: 'AIR_FRYER', categoryLabel: 'Friteuse Sans Huile', reference: 'H06AFBS2S3', price: 250, img: 'img/products/Hisense/PEM/H06AFBS2S3.jpg', isNew: false, desc: 'Air Fryer Hisense 6.7L Digital - Réf: H06AFBS2S3', specs: { 'Marque': 'Hisense', 'Référence': 'H06AFBS2S3', 'Catégorie': 'Friteuse Sans Huile', 'Type': 'Air Fryer', 'Capacité': '6,7 L', 'Puissance': '1350 W', 'Contrôle': 'Digital', 'Prix HT': '250.000 TND' } },
+            { id: 130, name: 'Blender Hisense 1.5L 500W Inox H15TBWES2A', brand: 'Hisense', category: 'BLENDER', categoryLabel: 'Blender', reference: 'H15TBWES2A', price: 107, img: 'img/products/Hisense/PEM/H15TBWES2A.webp', isNew: false, desc: 'Blender Hisense 1.5L Inox - Réf: H15TBWES2A', specs: { 'Marque': 'Hisense', 'Référence': 'H15TBWES2A', 'Catégorie': 'Blender', 'Capacité': '1,5 L', 'Puissance': '500 W', 'Couleur': 'Blanc/Inox (BL/Inox)', 'Prix HT': '107.000 TND' } }
         ];
 
         const categoryLabels = {
@@ -1729,7 +1940,18 @@
             'CUISSON_ELECTRIQUE': 'Cuisson Électrique',
             'GRILLE_VIANDE': 'Contact Grille Viande',
             'SERVICE_THE': 'Service à Thé',
-            'DESHUMIDIFICATEUR': 'Déshumidificateur'
+            'DESHUMIDIFICATEUR': 'Déshumidificateur',
+            'MAL': 'Machine à Laver',
+            'LAVE_VAISSELLE': 'Lave-Vaisselle',
+            'PLAQUE_CUISSON': 'Plaque de Cuisson',
+            'HOTTE': 'Hotte',
+            'ROBOT_CUISINE': 'Robot de Cuisine',
+            'BATTEUR': 'Batteur à Main',
+            'CONGELATEUR': 'Congélateur',
+            'MICRO_ONDE': 'Micro-ondes',
+            'ASPIRATEUR': 'Aspirateur',
+            'AIR_FRYER': 'Friteuse Sans Huile',
+            'BLENDER': 'Blender'
         };
 
         let cart = [];
@@ -1889,6 +2111,7 @@
 
         function toggleNewFilter() {
             filterNew = !filterNew;
+            if (filterNew) filterDiscount = false;
             currentPage = 1;
             saveState();
             renderFilters();
@@ -1897,6 +2120,7 @@
 
         function toggleDiscountFilter() {
             filterDiscount = !filterDiscount;
+            if (filterDiscount) filterNew = false;
             currentPage = 1;
             saveState();
             renderFilters();
@@ -2046,10 +2270,20 @@
     <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem; padding-bottom:1rem; border-bottom:1px solid rgba(255,255,255,0.05)">
       <img src="${item.img}" style="width:60px; height:60px; object-fit:contain; background:rgba(255,255,255,0.02); border-radius:10px; padding:0.5rem">
       <div style="flex:1">
-        <h4 style="font-size:1rem; margin-bottom:0.2rem">${item.name}</h4>
-        <div style="color:var(--gray); font-size:0.9rem">Qté: ${item.quantity}</div>
+        <h4 style="font-size:1rem; margin-bottom:0.4rem">${item.name}</h4>
+        <div style="display:flex; align-items:center; gap:0.7rem;">
+          <div class="qty-controls">
+            <button class="qty-btn qty-minus" onclick="changeQuantity(${item.id}, -1)" title="Diminuer"><i class="fa-solid fa-minus" style="font-size:0.7rem"></i></button>
+            <span class="qty-value">${item.quantity}</span>
+            <button class="qty-btn qty-plus" onclick="changeQuantity(${item.id}, 1)" title="Augmenter"><i class="fa-solid fa-plus" style="font-size:0.7rem"></i></button>
+          </div>
+          <span style="color:var(--gray); font-size:0.82rem">${finalPrice.toFixed(3)} TND</span>
+        </div>
       </div>
-      <div style="font-family:'Outfit'; font-weight:700; color:var(--secondary)">${(finalPrice * item.quantity).toFixed(3)} TND</div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; gap:0.3rem">
+        <div style="font-family:'Outfit'; font-weight:700; color:var(--secondary)">${(finalPrice * item.quantity).toFixed(3)} TND</div>
+        <button onclick="removeFromCart(${item.id})" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:0.8rem;opacity:0.7;transition:0.2s" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.7" title="Supprimer"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
     </div>
     `
             }).join('');
@@ -2090,8 +2324,22 @@
             }
         }
 
+        function changeQuantity(productId, delta) {
+            const item = cart.find(i => i.id === productId);
+            if (!item) return;
+            item.quantity += delta;
+            if (item.quantity <= 0) {
+                removeFromCart(productId);
+                return;
+            }
+            updateCartUI();
+            if (window.location.hash === '#checkout') {
+                renderCheckoutSummary();
+            }
+        }
+
         function updateCartUI() {
-            document.getElementById('cart-count').innerText = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-count').innerText = cart.length;
             const cartItems = document.getElementById('cart-items');
 
             if (cart.length === 0) {
@@ -2104,8 +2352,13 @@
         <img src="${item.img}" alt="${item.name}">
         <div class="cart-item-info">
           <div class="cart-item-title">${item.name}</div>
-          <div style="font-size: 0.9rem; color: var(--gray); display:flex; align-items:center; gap: 0.5rem; margin-top: 0.5rem;">
-            <span>Qté: ${item.quantity}</span>
+          <div style="display:flex; align-items:center; gap: 0.7rem; margin-top: 0.6rem;">
+            <div class="qty-controls">
+              <button class="qty-btn qty-minus" onclick="changeQuantity(${item.id}, -1)" title="Diminuer"><i class="fa-solid fa-minus" style="font-size:0.7rem"></i></button>
+              <span class="qty-value">${item.quantity}</span>
+              <button class="qty-btn qty-plus" onclick="changeQuantity(${item.id}, 1)" title="Augmenter"><i class="fa-solid fa-plus" style="font-size:0.7rem"></i></button>
+            </div>
+            <span style="color:var(--gray); font-size:0.82rem">${finalPrice.toFixed(3)} TND</span>
             <button onclick="removeFromCart(${item.id})" style="background:none;border:none;color:#ef4444;cursor:pointer; padding: 4px; font-size: 1rem; margin-left: auto;" title="Supprimer"><i class="fa-solid fa-trash-can"></i></button>
           </div>
         </div>
